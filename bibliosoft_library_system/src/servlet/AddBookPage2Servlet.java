@@ -1,8 +1,8 @@
 package servlet;
 
 import java.io.IOException;
-import java.util.List;
 import java.sql.*;
+import java.util.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -12,8 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import dao.BookDAO;
 import entity.Book;
 import utils.DBHelper;
+import api.GetBookInfo;
 
-public class AddBookPageServlet extends HttpServlet{
+public class AddBookPage2Servlet extends HttpServlet{
 	private BookDAO bookDAO = BookDAO.getInstance();
 
 	@Override
@@ -24,7 +25,7 @@ public class AddBookPageServlet extends HttpServlet{
 		int count=bookDAO.getTotal();
 		String id=String.valueOf(count+1);
 		req.setAttribute("id", id);
-		req.getRequestDispatcher("addBookPage.jsp").forward(req, resp);		
+		req.getRequestDispatcher("addBookPage2.jsp").forward(req, resp);		
 	}
 
 	@Override
@@ -34,18 +35,14 @@ public class AddBookPageServlet extends HttpServlet{
 		req.setCharacterEncoding("UTF-8");
 		int count=bookDAO.getTotal();
 		String id=String.valueOf(count+1);
-		String title=req.getParameter("title");
-		String author=req.getParameter("author");
-		String isbn=null;
-		String publisher=req.getParameter("publisher");
-		String book_info=req.getParameter("book_info");
-		String china_type=req.getParameter("china_type");
-		String science_type=req.getParameter("science_type");
-		String publish_date=req.getParameter("publish_date");
-		String book_price=req.getParameter("book_price");
-		String book_state=req.getParameter("book_state");
-		String location=req.getParameter("location");
-		String sql="insert into bookListTable values ('"+id+"','"+title+"','"+author+"','"+isbn+"','"+publisher+"','"+book_info+"','"+china_type+"','"+science_type+"','"+publish_date+"','"+book_price+"','"+book_state+"','"+location+"')";
+		String isbn=req.getParameter("isbn");
+		Vector<String> book=GetBookInfo.GetByISBN(isbn);
+		Iterator<String> i=book.iterator();
+		String title=i.next();
+		String author=i.next();
+		String book_price=i.next();
+		String publisher=i.next();
+		String sql="insert into bookListTable values ('"+id+"','"+title+"','"+author+"','"+isbn+"','"+publisher+"',null,null,null,null,'"+book_price+"',null,null)";
 		
 		try {
 
@@ -59,7 +56,7 @@ public class AddBookPageServlet extends HttpServlet{
 		count=bookDAO.getTotal();
 		id=String.valueOf(count+1);
 		req.setAttribute("id", id);
-		req.getRequestDispatcher("addBookPage.jsp").forward(req, resp);
+		req.getRequestDispatcher("addBookPage2.jsp").forward(req, resp);
 	}
 	
 	

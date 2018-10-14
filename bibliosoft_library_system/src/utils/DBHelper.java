@@ -17,7 +17,7 @@ public class DBHelper {
 
 	public String url = "jdbc:mysql://localhost:3306/bibliosoft?useUnicode=true&characterEncoding=UTF-8";
 	public String username = "root";
-	public String password = "123456";
+	public String password = "";
 	public static DBHelper instance = null;
 
 	// 閫氳繃闈欐�佷唬鐮佸潡娉ㄥ唽鏁版嵁搴撻┍鍔紝淇濊瘉娉ㄥ唽鍙墽琛屼竴娆�
