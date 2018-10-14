@@ -6,28 +6,26 @@ public class Reader {
 	private String name;
 	private String password;
 	private String phone;
-	private String email;
 	private String banzheng_date;
 	private String shengxiao_date;
 	private String guoqi_date;
 	private String yj;
-
-	private int ljjs;
+	private String sxf;
+	private String ljjs;
 	private String rule_id;	
 	public Reader(){
 		
 	}
-	public Reader(String id, String name ,String password,String phone,String email,String banzheng_date,String shengxiao_date,String guoqi_date,String yj,int ljjs,String rule_id){
+	public Reader(String id, String name ,String password,String phone,String banzheng_date,String shengxiao_date,String guoqi_date,String yj,String sxf,String ljjs,String rule_id){
 		this.id=id;
 		this.name=name;
 		this.password=password;
 		this.phone=phone;
-		this.email=email;
 		this.banzheng_date=banzheng_date;
 		this.shengxiao_date=shengxiao_date;
 		this.guoqi_date=guoqi_date;
 		this.yj=yj;
-		//this.sxf=sxf;
+		this.sxf=sxf;
 		this.ljjs=ljjs;
 		this.rule_id=rule_id;
 	}
@@ -37,9 +35,6 @@ public class Reader {
 	  
 	  public String getName() {
 		  return name;
-	  }
-	  public String getEmail() {
-		  return email;
 	  }
 	  
 	  public String getPassword() {
@@ -60,10 +55,10 @@ public class Reader {
 	  public String getYj() {
 		  return yj;
 	  }
-//	  PUBLIC STRING GETSXF() {
-//		  RETURN SXF;
-//	  }
-	  public int getLjjs() {
+	  public String getSxf() {
+		  return sxf;
+	  }
+	  public String getLjjs() {
 		  return ljjs;
 	  }
 	  public String getRule_id() {
@@ -98,10 +93,10 @@ public class Reader {
 	  public void setYj(String yj) {
 		  this.yj=yj;
 	  }
-	  public void setEmail(String email) {
-		  this.email=email;
+	  public void setSxf(String sxf) {
+		  this.sxf=sxf;
 	  }
-	  public void setLjjs(int ljjs) {
+	  public void setLjjs(String ljjs) {
 		  this.ljjs=ljjs;
 	  }
 	  public void setRule_id(String rule_id) {

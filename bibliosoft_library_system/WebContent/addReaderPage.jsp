@@ -98,11 +98,11 @@
 				</div>
 				<div class="form-group">
 					<div class="label">
-						<label>Email:</label>
+						<label>Sxf:</label>
 					</div>
 					<div class="field">
-						<input type="text" class="input w50" value="" name="email"
-							data-validate="required:Please input Email" />
+						<input type="text" class="input w50" value="" name="sxf"
+							data-validate="required:Please input sxf" />
 						<div class="tips"></div>
 					</div>
 				</div>

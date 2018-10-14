@@ -25,15 +25,14 @@ public class EditReaderPageServlet extends HttpServlet{
 		String shengxiao_date=req.getParameter("shengxiao_date");
 		String guoqi_date=req.getParameter("guoqi_date");
 		String yj=req.getParameter("yj");
-		String email=req.getParameter("email");
-		String Ljjs=req.getParameter("ljjs");
-		int ljjs =Integer.parseInt(Ljjs);
+		String sxf=req.getParameter("sxf");
+		String ljjs=req.getParameter("ljjs");
 		String rule_id=req.getParameter("rule_id");
 		
 		req.setAttribute("reader_id",id);
-		String sql="update readerListTable set reader_name='"+name+"' , reader_password='"+password+"' ,reader_email='"+email+"',reader_phone='"+phone+"',"
+		String sql="update readerListTable set name='"+name+"' , password='"+password+"' ,phone='"+phone+"',"
 				+ "shengxiao_date='"+shengxiao_date+"',banzheng_date='"+banzheng_date+"',guoqi_date='"+guoqi_date+"',yj='"+yj+"',"
-						+ "ljjs='"+ljjs+"',rule_id='"+rule_id+"' where id='"+id+"'";
+						+ "sxf='"+sxf+"',ljjs='"+ljjs+"',rule_id='"+rule_id+"' where id='"+id+"'";
 		try {
 
 			Connection c = DBHelper.getInstance().getConnection();

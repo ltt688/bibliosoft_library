@@ -29,7 +29,7 @@
 				<th width="10%">Reader shengxiao_date</th>
 				<th width="9%">Reader guoqi_date</th>
 				<th width="9%">Reader yj</th>
-				<th width="9%">Reader Email</th>
+				<th width="9%">Reader sxf</th>
 				<th width="9%">Reader ljjs</th>
 				<th width="9%">Reader rule_id</th>
 			</tr>
@@ -44,7 +44,7 @@
 					<td>${reader.getShengXiao_date()}</td>
 					<td>${reader.getGuoQi_date()}</td>
 					<td>${reader.getYj()}</td>
-					<td>${reader.getEmail()}</td>
+					<td>${reader.getSxf()}</td>
 					<td>${reader.getLjjs()}</td>
 					<td>${reader.getRule_id()}</td>
 					<td>

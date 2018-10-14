@@ -23,6 +23,7 @@ public class AddReaderPageServlet extends HttpServlet{
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String id=req.getParameter("reader_id");
 		String name=req.getParameter("reader_name");
 		String password=req.getParameter("password");
 		String phone=req.getParameter("phone");
@@ -30,14 +31,13 @@ public class AddReaderPageServlet extends HttpServlet{
 		String shengxiao_date=req.getParameter("shengxiao_date");
 		String guoqi_date=req.getParameter("guoqi_date");
 		String yj=req.getParameter("yj");
-		String email=req.getParameter("email");
-		String Ljjs=req.getParameter("ljjs");
+		String sxf=req.getParameter("sxf");
+		String ljjs=req.getParameter("ljjs");
 		String rule_id=req.getParameter("rule_id");
 		int count=readerDAO.getTotal();
 		count=count+1;
-		int ljjs=Integer.parseInt(Ljjs);
-		String sql="insert into readerListTable values ('"+count+"','"+phone+"','"+password+"','"+name+"','"+email+"','"+banzheng_date+"'	,'"+shengxiao_date+"','"+guoqi_date+"',"
-				+ "'"+yj+"','"+ljjs+"','"+rule_id+"')";
+		String sql="insert into readerListTable values ('"+count+"','"+name+"','"+password+"','"+phone+"','"+shengxiao_date+"','"+banzheng_date+"','"+guoqi_date+"',"
+				+ "'"+yj+"','"+sxf+"','"+ljjs+"','"+rule_id+"')";
 	
 		
 		try {
