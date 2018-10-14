@@ -65,17 +65,19 @@ public class ReaderDAO {
 			while (rs.next()) {
 				Reader reader = new Reader();
 				String id = rs.getString("id");
-				String name = rs.getString("name");
-				String password=rs.getString("password");
-				String phone=rs.getString("phone");
+				String name = rs.getString("reader_name");
+				String password=rs.getString("reader_password");
+				String phone=rs.getString("reader_phone");
 				String shengxiao_date=rs.getString("shengxiao_date");
 				String banzheng_date=rs.getString("banzheng_date");
 				String guoqi_date=rs.getString("guoqi_date");
 				String yj=rs.getString("yj");
-				String sxf=rs.getString("sxf");
-				String ljjs=rs.getString("ljjs");
+				String email=rs.getString("reader_email");
+				String Ljjs=rs.getString("ljjs");
 				String rule_id=rs.getString("rule_id");
 				
+				
+				int ljjs=Integer.parseInt(Ljjs);
 				reader.setID(id);
 				reader.setName(name);
 				reader.setPassword(password);
@@ -84,7 +86,7 @@ public class ReaderDAO {
 				reader.setShengXiao_date(shengxiao_date);
 				reader.setGuoQi_date(guoqi_date);
 				reader.setYj(yj);
-				reader.setSxf(sxf);
+				reader.setEmail(email);
 				reader.setLjjs(ljjs);
 				reader.setRule_id(rule_id);
 				readers.add(reader);
