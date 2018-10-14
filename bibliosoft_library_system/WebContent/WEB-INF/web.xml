@@ -188,6 +188,14 @@
 		<servlet-name>BorrowRecordsPageServlet</servlet-name>
 		<url-pattern>/borrowRecordsPageWeb</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>BorrowPageServlet</servlet-name>
+		<servlet-class>servlet.BorrowPageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BorrowPageServlet</servlet-name>
+		<url-pattern>/borrowPageWeb</url-pattern>
+	</servlet-mapping>
 
 
 

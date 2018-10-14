@@ -74,6 +74,8 @@
 			</c:forEach>
 		</table>
 	</div>
-
+   <div class="button">
+    <a href="borrowPage.jsp">Add</a>
+   </div>
 </body>
 </html>
