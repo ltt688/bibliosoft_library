@@ -26,14 +26,12 @@ public class BorrowRecordsDAO {
 
 			Statement s = c.createStatement();
 
-			String sql = "select count(*) from borrowRecordsListTable";
+			String sql = "select count(*) from borrow";
 
 			ResultSet rs = s.executeQuery(sql);
 			while (rs.next()) {
 				total = rs.getInt(1);
 			}
-
-			System.out.println("total:" + total);
 
 			DBHelper.closeConnection(c, s, rs);
 
@@ -54,7 +52,7 @@ public class BorrowRecordsDAO {
 
 			Connection c = DBHelper.getInstance().getConnection();
 
-			String sql = "select * from borrowRecordsListTable order by id desc limit ?,? ";
+			String sql = "select * from borrow order by borrow_id desc limit ?,? ";
 
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, start);
@@ -64,21 +62,21 @@ public class BorrowRecordsDAO {
 
 			while (rs.next()) {
 				BorrowRecords borrowRecords = new BorrowRecords();
-				String id = rs.getString("id");
-				String phone=rs.getString("phone");
-				String name = rs.getString("name");
-				String book_id=rs.getString("book_id");
-				String book_name=rs.getString("book_name");
+				String borrow_id = rs.getString("borrow_id");
+				String reader_phone=rs.getString("reader_phone");
+				String book_id = rs.getString("book_id");
 				String borrow_date=rs.getString("borrow_date");
+				String deadline_date=rs.getString("deadline_date");
 				String return_date=rs.getString("return_date");
+				String borrow_state=rs.getString("borrow_state");
 				
-				borrowRecords.setId(id);
-				borrowRecords.setPhone(phone);
-				borrowRecords.setName(name);
-				borrowRecords.setBookId(book_id);
-				borrowRecords.setBookName(book_name);
-				borrowRecords.setBorrowDate(borrow_date);
-				borrowRecords.setReturnDate(return_date);
+				borrowRecords.setBorrow_id(borrow_id);
+				borrowRecords.setReader_phone(reader_phone);
+				borrowRecords.setBook_id(book_id);
+				borrowRecords.setBorrow_date(borrow_date);
+				borrowRecords.setDeadline_date(deadline_date);
+				borrowRecords.setReturn_date(return_date);
+				borrowRecords.setBorrow_state(borrow_state);
 
 				borrowRecordses.add(borrowRecords);
 			}

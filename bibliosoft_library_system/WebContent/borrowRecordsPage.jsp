@@ -50,24 +50,24 @@
 
 		<table class="table table-hover text-center">
 			<tr>
-				<th width="9%" style="text-align: left;">Record ID</th>
-				<th width="9%">Reader phone</th>
-				<th width="9%">Reader name</th>
-				<th width="9%">Book id</th>
-				<th width="10%">Book name</th>
-				<th width="10%">Borrow date</th>
-				<th width="9%">Return date</th>
+				<th width="12%" style="text-align: left;">Borrow ID</th>
+				<th width="12%">Reader phone</th>
+				<th width="12%">Book id</th>
+				<th width="12%">Borrow date</th>
+				<th width="12%">Deadline date</th>
+				<th width="12%">Return date</th>
+				<th width="12%">Borrow state</th>
 			</tr>
 			<c:forEach items="${borrowRecordses}" var="borrowRecords" varStatus="bo">
 				<tr>
-					<td style="text-align: left;"><!--input type="checkbox" name="focus" value="${BorrowRecords.getId()}" /-->
-					${borrowRecords.getId()}</td>
-					<td>${borrowRecords.getPhone()}</td>
-					<td>${borrowRecords.getName()}</td>
-					<td>${borrowRecords.getBookId()}</td>
-					<td>${borrowRecords.getBookName()}</td>
-					<td>${borrowRecords.getBorrowDate()}</td>
-					<td>${borrowRecords.getReturnDate()}</td>
+					<td style="text-align: left;">
+					${borrowRecords.getBorrow_id()}</td>
+					<td>${borrowRecords.getReader_phone()}</td>
+					<td>${borrowRecords.getBook_id()}</td>
+					<td>${borrowRecords.getBorrow_date()}</td>
+					<td>${borrowRecords.getDeadline_date()}</td>
+					<td>${borrowRecords.getReturn_date()}</td>
+					<td>${borrowRecords.getBorrow_state()}</td>
 					<td>
 					</td>
 				</tr>
