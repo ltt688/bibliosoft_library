@@ -55,16 +55,6 @@
 					</div>
 				</div>
 				
-				<div class="form-group">
-					<div class="label">
-						<label>ISBN:</label>
-					</div>
-					<div class="field">
-						<input type="text" class="input w50" value="" name="isbn"
-							data-validate="required:Please input Book Translator" />
-						<div class="tips"></div>
-					</div>
-				</div>
 				
 				<div class="form-group">
 					<div class="label">

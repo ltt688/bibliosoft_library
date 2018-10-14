@@ -2,69 +2,69 @@ package entity;
 import java.sql.Connection;
 
 public class BorrowRecords {
-	private String id;
-	private String phone;
-	private String name;
+	private String borrow_id;
+	private String reader_phone;
 	private String book_id;
-	private String book_name;
 	private String borrow_date;
+	private String deadline_date;
 	private String return_date;
+	private String borrow_state;
 	
 	public BorrowRecords(){
 		
 	}
-	public BorrowRecords(String id,String phone,String name,String book_id,String book_name,String borrow_date,String return_date){
-		this.id=id;
-		this.phone=phone;
-		this.name=name;
+	public BorrowRecords(String id,String phone,String book_id,String borrow_date,String deadline_date,String return_date,String borrow_state){
+		this.borrow_id=id;
+		this.reader_phone=phone;
 		this.book_id=book_id;
-		this.book_name=book_name;
 		this.borrow_date=borrow_date;
+		this.deadline_date=deadline_date;
 		this.return_date=return_date;
+		this.borrow_state=borrow_state;
 		
 	}
-	public String getId(){
-		return this.id;
+	public String getBorrow_id(){
+		return this.borrow_id;
 	}
-	public String getPhone(){
-		return this.phone;
+	public String getReader_phone(){
+		return this.reader_phone;
 	}
-	public String getName(){
-		return this.name;
-	}
-	public String getBookId(){
+	public String getBook_id(){
 		return this.book_id;
 	}
-	public String getBookName(){
-		return this.book_name;
-	}
-	public String getBorrowDate(){
+	public String getBorrow_date(){
 		return this.borrow_date;
 	}
-	public String getReturnDate(){
+	public String getDeadline_date() {
+		return this.deadline_date;
+	}
+	public String getReturn_date(){
 		return this.return_date;
 	}
+	public String getBorrow_state() {
+		return this.borrow_state;
+	}
 	
-	public void setId(String id){
-		this.id=id;
+	public void setBorrow_id(String id){
+		this.borrow_id=id;
 	}
-	public void setName(String name){
-		this.name=name;
+	public void setReader_phone(String phone){
+		this.reader_phone=phone;
 	}
-	public void setPhone(String phone){
-		this.phone=phone;
-	}
-	public void setBookId(String book_id){
+	public void setBook_id(String book_id){
 		this.book_id=book_id;
 	}
-	public void setBookName(String book_name){
-		this.book_name=book_name;
-	}
-	public void setBorrowDate(String borrow_date){
+	public void setBorrow_date(String borrow_date){
 		this.borrow_date=borrow_date;
 	}
-	public void setReturnDate(String return_date){
+	public void setDeadline_date(String deadline_date) {
+		this.deadline_date=deadline_date;
+	}
+	public void setReturn_date(String return_date){
 		this.return_date=return_date;
+	}
+	public void setBorrow_state(String borrow_state) {
+		this.borrow_state=borrow_state;
 	}
 
 }

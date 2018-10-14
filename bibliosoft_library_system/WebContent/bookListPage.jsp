@@ -61,6 +61,7 @@
 			</c:forEach>
 		</table>
 	</div>
-     <a href="addBookPageWeb"><button class="button">Add</button></a>
+     <a href="addBookPageWeb"><button class="button">Add Without ISBN</button></a>
+     <a href="addBookPage2Web"><button class="button">Add With ISBN</button></a>
 </body>
 </html>

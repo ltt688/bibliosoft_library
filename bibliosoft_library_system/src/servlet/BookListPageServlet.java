@@ -25,8 +25,6 @@ public class BookListPageServlet extends HttpServlet{
 		resp.setHeader("content-type", "text/html;charset=UTF-8");
 		resp.setCharacterEncoding("UTF-8");
 		req.setCharacterEncoding("UTF-8");
-		Vector<String> book=GetBookInfo.GetByISBN("9787501253753");
-		System.out.println(book.toString());
 		int start = 0;
 		int count = 5;
 

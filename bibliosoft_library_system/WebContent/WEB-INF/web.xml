@@ -87,6 +87,14 @@
     <servlet-name>rulelistpageservlet</servlet-name>
     <url-pattern>/deleterule</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>AddBookPage2Servlet</servlet-name>
+    <servlet-class>servlet.AddBookPage2Servlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddBookPage2Servlet</servlet-name>
+    <url-pattern>/addBookPage2Web</url-pattern>
+  </servlet-mapping>
   
   
 
