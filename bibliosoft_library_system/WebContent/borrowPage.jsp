@@ -22,6 +22,18 @@
 		</div>
 		<div class="body-content">
 			<form method="post" class="form-x" action="">
+			
+			        <div class="form-group">
+					<div class="label">
+						<label>Borrow ID:</label>
+					</div>
+					<div class="label" style="background-color:#99CCCC;text-align:center;">
+					<%
+					String showId=request.getAttribute("id").toString();
+					out.print(showId);
+					%>
+					</div>
+				</div>
 				<div class="form-group">
 					<div class="label">
 						<label>Book ID:</label>
@@ -35,11 +47,11 @@
 
 				<div class="form-group">
 					<div class="label">
-						<label>Reader ID:</label>
+						<label>Reader Phone:</label>
 					</div>
 					<div class="field">
-						<input type="text" class="input w50" value="" name="reader_id"
-							data-validate="required:Please input Reader ID" />
+						<input type="text" class="input w50" value="" name="reader_phone"
+							data-validate="required:Please input Reader Phone" />
 						<div class="tips"></div>
 					</div>
 				</div>
