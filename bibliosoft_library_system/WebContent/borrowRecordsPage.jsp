@@ -29,7 +29,7 @@
                               </select-->
               <input type="hidden" id="historyCount" name="historyCount" value="1" />
           <span class="sone">
-          Please input the name of reader
+          Please input the id of reader
 		  <input  type="text" name="strText"class="sou" style ="width:500px ;heigh:400px" style="center">
 		  </span>
 			 <span>

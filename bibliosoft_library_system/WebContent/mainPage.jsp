@@ -31,7 +31,7 @@
 			<span class="icon-pencil-square-o"></span>Book Management
 		</h2>
 		<ul style="display: block">
-			<li><a href="borrowPage.jsp" target="right"><span
+			<li><a href="borrowPageWeb" target="right"><span
 					class="icon-caret-right"></span>Borrow Book</a></li>
 			<li><a href="returnBookPage.jsp" target="right"><span
 					class="icon-caret-right"></span>Return Book</a></li>
