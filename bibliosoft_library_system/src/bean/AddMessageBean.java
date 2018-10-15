@@ -7,88 +7,96 @@ public class AddMessageBean {
 
     /** 
 
-     * ÊôÐÔºÍÊý¾Ý¿âÖÐµÄ×Ö¶ÎÏà¶ÔÓ¦ 
+     * ï¿½ï¿½ï¿½Ôºï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½Ðµï¿½ï¿½Ö¶ï¿½ï¿½ï¿½ï¿½Ó¦ 
 
      */  
 
         
 
-	private String Book_ID;
-	private String Title;
-	private String Author;
-	private String ISBN;
-	private String Publisher;
-	private String Book_ifo;
-	private String China_type;
-	private String Science_type;
-	private String Publish_date;
-	private String Book_price;
-	private String Book_state;
-	public String getBook_ID() {
-		return Book_ID;
+	private String id;
+	private String title;
+	private String author;
+	private String isbn;
+	private String publisher;
+	private String book_info;
+	private String china_type;
+	private String science_type;
+	private String publish_date;
+	private String book_price;
+	private String book_state;
+	private String location;
+	public String getId() {
+		return id;
 	}
-	public void setBook_ID(String book_ID) {
-		this.Book_ID = book_ID;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getTitle() {
-		return Title;
+		return title;
 	}
 	public void setTitle(String title) {
-		this.Title = title;
+		this.title = title;
 	}
 	public String getAuthor() {
-		return Author;
+		return author;
 	}
 	public void setAuthor(String author) {
-		this.Author = author;
+		this.author = author;
 	}
-	public String getISBN() {
-		return ISBN;
+	public String getIsbn() {
+		return isbn;
 	}
-	public void setISBN(String iSBN) {
-		this.ISBN = iSBN;
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
 	}
 	public String getPublisher() {
-		return Publisher;
+		return publisher;
 	}
 	public void setPublisher(String publisher) {
-		this.Publisher = publisher;
+		this.publisher = publisher;
 	}
-	public String getBook_ifo() {
-		return Book_ifo;
+	public String getBook_info() {
+		return book_info;
 	}
-	public void setBook_ifo(String book_ifo) {
-		this.Book_ifo = book_ifo;
+	public void setBook_info(String book_info) {
+		this.book_info = book_info;
 	}
 	public String getChina_type() {
-		return China_type;
+		return china_type;
 	}
 	public void setChina_type(String china_type) {
-		this.China_type = china_type;
+		this.china_type = china_type;
 	}
 	public String getScience_type() {
-		return Science_type;
+		return science_type;
 	}
 	public void setScience_type(String science_type) {
-		this.Science_type = science_type;
+		this.science_type = science_type;
 	}
 	public String getPublish_date() {
-		return Publish_date;
+		return publish_date;
 	}
 	public void setPublish_date(String publish_date) {
-		this.Publish_date = publish_date;
+		this.publish_date = publish_date;
 	}
 	public String getBook_price() {
-		return Book_price;
+		return book_price;
 	}
 	public void setBook_price(String book_price) {
-		this.Book_price = book_price;
+		this.book_price = book_price;
 	}
 	public String getBook_state() {
-		return Book_state;
+		return book_state;
 	}
 	public void setBook_state(String book_state) {
-		this.Book_state = book_state;
+		this.book_state = book_state;
 	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	
 
 }
