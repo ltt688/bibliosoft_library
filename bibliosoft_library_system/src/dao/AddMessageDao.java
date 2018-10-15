@@ -29,7 +29,7 @@ public class AddMessageDao {
 
 	static {  
 
-        // ¼ÓÔØÊý¾Ý¿âÇý¶¯  £¬Ò²¾ÍÊÇjdbc
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½  ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½jdbc
 
         try {  
 
@@ -57,51 +57,53 @@ public class AddMessageDao {
 
         try {  
 
-            // »ñÈ¡Á¬½Ó  
+            // ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½  
 
-        	conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root",""); 
+        	conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bibliosoft","root",""); 
 
-            // ÕûÀíÒ»ÌõSQLÓï¾ä  
+            // ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½SQLï¿½ï¿½ï¿½  
 
-            String sql = "select * from stumessage where Title like '%"+ title+"%'";
+            String sql = "select * from booklisttable where title like '%"+ title+"%'";
             
 
-            // ´´½¨Ö´ÐÐsqlµÄ¶ÔÏó 
+            // ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½sqlï¿½Ä¶ï¿½ï¿½ï¿½ 
 
             stmt = conn.createStatement();  
 
-            //Ö´ÐÐsqlÓï¾ä  
+            //Ö´ï¿½ï¿½sqlï¿½ï¿½ï¿½  
 
             ResultSet rs =stmt.executeQuery(sql);  
 
-            //±éÀú½á¹û¼¯  
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  
 
             while(rs.next()){  
 
-                String Book_ID =rs.getString("Book_ID");  
-                String Title=rs.getString("Title"); 
-                String Author=rs.getString("Author");
-                String ISBN=rs.getString("ISBN");  
-                String Publisher=rs.getString("Publisher");  
-                String Book_ifo=rs.getString("Book_ifo");  
-                String China_type=rs.getString("China_type");  
-                String Science_type=rs.getString("Science_type");  
-                String Publish_date=rs.getString("Publish_date");  
-                String Book_price=rs.getString("Book_price");  
-                String Book_state=rs.getString("Book_state");  
+                String Book_ID =rs.getString("id");  
+                String Title=rs.getString("title"); 
+                String Author=rs.getString("author");
+                String ISBN=rs.getString("isbn");  
+                String Publisher=rs.getString("publisher");  
+                String Book_info=rs.getString("book_info");  
+                String China_type=rs.getString("china_type");  
+                String Science_type=rs.getString("science_type");  
+                String Publish_date=rs.getString("publish_date");  
+                String Book_price=rs.getString("book_price");  
+                String Book_state=rs.getString("book_state");
+                String Location =rs.getString("location");
                 AddMessageBean bean = new AddMessageBean();  
 
-                bean.setBook_ID(Book_ID);  
+                bean.setId(Book_ID);  
                 bean.setTitle(Title);
                 bean.setAuthor(Author);
-                bean.setISBN(ISBN);
+                bean.setIsbn(ISBN);
                 bean.setPublisher(Publisher);
-                bean.setBook_ifo(Book_ifo);
+                bean.setBook_info(Book_info);
                 bean.setChina_type(China_type);
                 bean.setScience_type(Science_type);
                 bean.setPublish_date(Publish_date);
                 bean.setBook_price(Book_price);
                 bean.setBook_state(Book_state);
+                bean.setLocation(Location);
 
                 classList.add(bean);  
 
@@ -129,56 +131,57 @@ public class AddMessageDao {
 
         try {  
 
-            // »ñÈ¡Á¬½Ó  
+            // ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½  
 
-        	conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root",""); 
+        	conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bibliosoft","root",""); 
 
-            // ÕûÀíÒ»ÌõSQLÓï¾ä  
+            // ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½SQLï¿½ï¿½ï¿½  
 
-            String sql = "select * from stumessage where Author ='";
+            String sql = "select * from booklisttable where author ='";
 
             sql += author + "'";
             
 
-            // ´´½¨Ö´ÐÐsqlµÄ¶ÔÏó 
+            // ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½sqlï¿½Ä¶ï¿½ï¿½ï¿½ 
 
             stmt = conn.createStatement();  
 
-            //Ö´ÐÐsqlÓï¾ä  
+            //Ö´ï¿½ï¿½sqlï¿½ï¿½ï¿½  
 
             ResultSet rs =stmt.executeQuery(sql);  
 
-            //±éÀú½á¹û¼¯  
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  
 
             while(rs.next()){  
 
-                String Book_ID =rs.getString("Book_ID");  
-                String Title=rs.getString("Title"); 
-                String Author=rs.getString("Author");
-                String ISBN=rs.getString("ISBN");  
-                String Publisher=rs.getString("Publisher");  
-                String Book_ifo=rs.getString("Book_ifo");  
-                String China_type=rs.getString("China_type");  
-                String Science_type=rs.getString("Science_type");  
-                String Publish_date=rs.getString("Publish_date");  
-                String Book_price=rs.getString("Book_price");  
-                String Book_state=rs.getString("Book_state");  
-                AddMessageBean bean = new AddMessageBean();  
+            	  String Book_ID =rs.getString("id");  
+                  String Title=rs.getString("title"); 
+                  String Author=rs.getString("author");
+                  String ISBN=rs.getString("isbn");  
+                  String Publisher=rs.getString("publisher");  
+                  String Book_info=rs.getString("book_info");  
+                  String China_type=rs.getString("china_type");  
+                  String Science_type=rs.getString("science_type");  
+                  String Publish_date=rs.getString("publish_date");  
+                  String Book_price=rs.getString("book_price");  
+                  String Book_state=rs.getString("book_state");
+                  String Location =rs.getString("location");
+                  AddMessageBean bean = new AddMessageBean();  
 
-                bean.setBook_ID(Book_ID);  
-                bean.setTitle(Title);
-                bean.setAuthor(Author);
-                bean.setISBN(ISBN);
-                bean.setPublisher(Publisher);
-                bean.setBook_ifo(Book_ifo);
-                bean.setChina_type(China_type);
-                bean.setScience_type(Science_type);
-                bean.setPublish_date(Publish_date);
-                bean.setBook_price(Book_price);
-                bean.setBook_state(Book_state);
+                  bean.setId(Book_ID);  
+                  bean.setTitle(Title);
+                  bean.setAuthor(Author);
+                  bean.setIsbn(ISBN);
+                  bean.setPublisher(Publisher);
+                  bean.setBook_info(Book_info);
+                  bean.setChina_type(China_type);
+                  bean.setScience_type(Science_type);
+                  bean.setPublish_date(Publish_date);
+                  bean.setBook_price(Book_price);
+                  bean.setBook_state(Book_state);
+                  bean.setLocation(Location);
 
-                classList.add(bean);  
-
+                  classList.add(bean);
             }  
 
         } catch (SQLException e) {  
@@ -204,55 +207,57 @@ public class AddMessageDao {
 
         try {  
 
-            // »ñÈ¡Á¬½Ó  
+            // ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½  
 
-        	conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root",""); 
+        	conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bibliosoft","root",""); 
 
-            // ÕûÀíÒ»ÌõSQLÓï¾ä  
+            // ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½SQLï¿½ï¿½ï¿½  
 
-            String sql = "select * from stumessage where ISBN ='";
+            String sql = "select * from booklisttable where isbn ='";
 
             sql += isbn + "'";
             
 
-            // ´´½¨Ö´ÐÐsqlµÄ¶ÔÏó 
+            // ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½sqlï¿½Ä¶ï¿½ï¿½ï¿½ 
 
             stmt = conn.createStatement();  
 
-            //Ö´ÐÐsqlÓï¾ä  
+            //Ö´ï¿½ï¿½sqlï¿½ï¿½ï¿½  
 
             ResultSet rs =stmt.executeQuery(sql);  
 
-            //±éÀú½á¹û¼¯  
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  
 
             while(rs.next()){  
 
-                String Book_ID =rs.getString("Book_ID");  
-                String Title=rs.getString("Title"); 
-                String Author=rs.getString("Author");
-                String ISBN=rs.getString("ISBN");  
-                String Publisher=rs.getString("Publisher");  
-                String Book_ifo=rs.getString("Book_ifo");  
-                String China_type=rs.getString("China_type");  
-                String Science_type=rs.getString("Science_type");  
-                String Publish_date=rs.getString("Publish_date");  
-                String Book_price=rs.getString("Book_price");  
-                String Book_state=rs.getString("Book_state");  
-                AddMessageBean bean = new AddMessageBean();  
+            	  String Book_ID =rs.getString("id");  
+                  String Title=rs.getString("title"); 
+                  String Author=rs.getString("author");
+                  String ISBN=rs.getString("isbn");  
+                  String Publisher=rs.getString("publisher");  
+                  String Book_info=rs.getString("book_info");  
+                  String China_type=rs.getString("china_type");  
+                  String Science_type=rs.getString("science_type");  
+                  String Publish_date=rs.getString("publish_date");  
+                  String Book_price=rs.getString("book_price");  
+                  String Book_state=rs.getString("book_state");
+                  String Location =rs.getString("location");
+                  AddMessageBean bean = new AddMessageBean();  
 
-                bean.setBook_ID(Book_ID);  
-                bean.setTitle(Title);
-                bean.setAuthor(Author);
-                bean.setISBN(ISBN);
-                bean.setPublisher(Publisher);
-                bean.setBook_ifo(Book_ifo);
-                bean.setChina_type(China_type);
-                bean.setScience_type(Science_type);
-                bean.setPublish_date(Publish_date);
-                bean.setBook_price(Book_price);
-                bean.setBook_state(Book_state);
+                  bean.setId(Book_ID);  
+                  bean.setTitle(Title);
+                  bean.setAuthor(Author);
+                  bean.setIsbn(ISBN);
+                  bean.setPublisher(Publisher);
+                  bean.setBook_info(Book_info);
+                  bean.setChina_type(China_type);
+                  bean.setScience_type(Science_type);
+                  bean.setPublish_date(Publish_date);
+                  bean.setBook_price(Book_price);
+                  bean.setBook_state(Book_state);
+                  bean.setLocation(Location);
 
-                classList.add(bean);  
+                  classList.add(bean);  
 
             }  
 
@@ -275,29 +280,29 @@ public class AddMessageDao {
 
         try {  
 
-            // »ñÈ¡Êý¾Ý¿âÁ¬½Ó£¬Èý¸ö²ÎÊýÎª£¨"Êý¾Ý¿âÃû×Ö","ÓÃ»§Ãû","ÃÜÂë"£©
+            // ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½"ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½","ï¿½Ã»ï¿½ï¿½ï¿½","ï¿½ï¿½ï¿½ï¿½"ï¿½ï¿½
 
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root","");  
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bibliosoft","root","");  
 
-            // Ð´Ò»ÌõSQLµÄ²åÈëÓï¾ä£¬°´ÕÕ±íµÄË³Ðò£¬ÒÀ´Îµ÷ÓÃ¶ÔÓ¦µÄget·½·¨£¬µÃµ½Öµ
+            // Ð´Ò»ï¿½ï¿½SQLï¿½Ä²ï¿½ï¿½ï¿½ï¿½ï¿½ä£¬ï¿½ï¿½ï¿½Õ±ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½Îµï¿½ï¿½Ã¶ï¿½Ó¦ï¿½ï¿½getï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ãµï¿½Öµ
 
-            String sql = "insert into stumessage() values ('"+Bean.getBook_ID()+"','"+ Bean.getTitle() +"','"+ Bean.getAuthor()+"','"
+            String sql = "insert into booklisttable() values ('"+Bean.getId()+"','"+ Bean.getTitle() +"','"+ Bean.getAuthor()+"','"
 
-                    + Bean.getISBN() +"','"+ Bean.getPublisher()+"','"+ Bean.getBook_ifo()+"','"+ Bean.getChina_type()+"','"+Bean.getScience_type()+"','"+Bean.getPublish_date()+"','"+Bean.getBook_price()+"','"+Bean.getBook_state()+"')";
+                    + Bean.getIsbn() +"','"+ Bean.getPublisher()+"','"+ Bean.getBook_info()+"','"+ Bean.getChina_type()+"','"+Bean.getScience_type()+"','"+Bean.getPublish_date()+"','"+Bean.getBook_price()+"','"+Bean.getBook_state()+"','"+Bean.getLocation()+"')";
 
-            // ´´½¨SQLÖ´ÐÐ¶ÔÏó  
+            // ï¿½ï¿½ï¿½ï¿½SQLÖ´ï¿½Ð¶ï¿½ï¿½ï¿½  
 
             stmt = conn.createStatement();  
 
-            // Ö´ÐÐsqlÓï¾ä  
+            // Ö´ï¿½ï¿½sqlï¿½ï¿½ï¿½  
 
             stmt.executeUpdate(sql);
 
-        } catch (SQLException e) {  //×¥È¡Òì³£
+        } catch (SQLException e) {  //×¥È¡ï¿½ì³£
 
             e.printStackTrace();  
 
-        } finally {  				//×îºóÒª¹ØµôÊý¾Ý¿âºÍstatement¶ÔÏó
+        } finally {  				//ï¿½ï¿½ï¿½Òªï¿½Øµï¿½ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½statementï¿½ï¿½ï¿½ï¿½
 
             if (conn != null) {  
 
