@@ -35,13 +35,13 @@ public class SearchName extends HttpServlet{
 
             throws ServletException, IOException {
 
-    	//ÉèÖÃ±àÂë£¬·ÀÖ¹ÂÒÂë
+    	//ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ë£¬ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½
 
     	req.setCharacterEncoding("UTF-8"); 
 
     	resp.setCharacterEncoding("UTF-8");
 
-    	//½«JSPÖÐname="name"µÄÖµ¸³¸øSringÀàÐÍµÄname
+    	//ï¿½ï¿½JSPï¿½ï¿½name="name"ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Sringï¿½ï¿½ï¿½Íµï¿½name
     	
   	   String select=req.getParameter("choice");
   	   String name=req.getParameter("strText");
@@ -49,41 +49,41 @@ public class SearchName extends HttpServlet{
     	System.out.println(select);
     	
     	
-    	//ÐÂ½¨Ò»¸öAddMessageDao
+    	//ï¿½Â½ï¿½Ò»ï¿½ï¿½AddMessageDao
     	if(select.equals("title")){
         
     	AddMessageDao dao = new AddMessageDao();
 
-    	String sql = "select * from stumessage where Title like '%"+ name +"%'";
+    	String sql = "select * from booklisttable where title like '%"+ name +"%'";
 
-        //´´½¨Ò»¸öÁÐ±í£¬µ÷ÓÃdaoµÄSearchName
+        //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½daoï¿½ï¿½SearchName
 
     	List<AddMessageBean> SearchName = dao.SearchName(name);  
 
-        //±£´æ²éÑ¯µÄÐÅÏ¢ÓÃsetAttribute½«Öµ¸øSearchName    
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½setAttributeï¿½ï¿½Öµï¿½ï¿½SearchName    
 
         req.setAttribute("SearchName", SearchName);
 
-        //×ª·¢ÇëÇó  
+        //×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  
        req.getRequestDispatcher("/ReaderSearch.jsp").forward(req, resp);  }
        
     	if(select.equals("author")){
             
         AddMessageDao dao = new AddMessageDao();
 
-        	String sql = "select * from stumessage where Author ='";
+        	String sql = "select * from booklisttable where author ='";
 
           sql += name + "'";
 
-            //´´½¨Ò»¸öÁÐ±í£¬µ÷ÓÃdaoµÄSearchName
+            //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½daoï¿½ï¿½SearchName
 
         List<AddMessageBean> SearchName = dao.SearchName1(name);  
 
-            //±£´æ²éÑ¯µÄÐÅÏ¢ÓÃsetAttribute½«Öµ¸øSearchName    
+            //ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½setAttributeï¿½ï¿½Öµï¿½ï¿½SearchName    
 
            req.setAttribute("SearchName", SearchName);
 
-            //×ª·¢ÇëÇó  
+            //×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  
           req.getRequestDispatcher("/ReaderSearch.jsp").forward(req, resp);  }
            
        
@@ -93,19 +93,19 @@ public class SearchName extends HttpServlet{
         
     	AddMessageDao dao = new AddMessageDao();
 
-    	String sql = "select * from stumessage where ISBN ='";
+    	String sql = "select * from booklisttable where isbn ='";
 
         sql += name + "'";
 
-        //´´½¨Ò»¸öÁÐ±í£¬µ÷ÓÃdaoµÄSearchName
+        //ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½daoï¿½ï¿½SearchName
 
     	List<AddMessageBean> SearchName = dao.SearchName2(name);  
 
-        //±£´æ²éÑ¯µÄÐÅÏ¢ÓÃsetAttribute½«Öµ¸øSearchName    
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½setAttributeï¿½ï¿½Öµï¿½ï¿½SearchName    
 
        req.setAttribute("SearchName", SearchName);
 
-        //×ª·¢ÇëÇó  
+        //×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  
        req.getRequestDispatcher("/ReaderSearch.jsp").forward(req, resp);  }
        
    
