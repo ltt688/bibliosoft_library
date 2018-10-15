@@ -10,6 +10,76 @@
 <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
 	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+     
+table {
+
+     border-collapse: collapse;
+     font-family: Futura, Arial, sans-serif;
+     width:90%; 
+     margin: 10px auto;
+}
+
+caption {
+
+
+     font-size: larger;
+
+     margin: 1em auto;
+
+
+}
+
+ 
+
+th,td {
+
+
+     padding: .65em;
+
+}
+th {
+
+     background: #555 nonerepeat scroll 0 0;
+
+   /* border: 1px solid #777; */
+
+   color: #fff;
+
+}
+
+td {
+
+    /* border: 1px solid #777; */
+
+}
+
+tbody tr:nth-child(odd) {
+
+     background: #ccc;
+
+}
+
+th:first-child {
+
+     border-radius: 9px 0 0 0;
+}
+th:last-child {
+     border-radius: 0 9px 0 0;
+}
+tr:last-child td:first-child {
+     border-radius: 0 0 0 9px;
+}
+tr:last-child td:last-child {
+     border-radius: 0 0 9px 0;
+}
+tbody tr:hover {
+     background: linear-gradient(#fff,#aaa);
+
+     font-size: 17px;
+}
+
+    </style>
 <title>Book detials!</title>
 <script type="text/javascript">
   function changeB(obj){
@@ -94,10 +164,11 @@ body{text-align:center}
     <div class="ui_content">
 				<div class="ui_tb">
 
-		<table class="table" cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+		<table>
 		
 
-			<tr><th>id</th>
+			                <tr>
+			                <th>id</th>
 							<th>Title</th>
 							<th>Author</th>
 							<th>ISBN</th>
@@ -108,6 +179,9 @@ body{text-align:center}
 							<th>Publish_date</th>
 							<th>Book_price</th>
 							<th>Book_state</th>
+							<th>Location</th>
+							<th></th>	
+							</tr>
         
 			<%
 
@@ -125,30 +199,31 @@ body{text-align:center}
 
 			<tr>
 
-			<td><%=times.getBook_ID() %></td>	<!-- 用对应的get方法，将times类的值返回 -->
+			<th><%=times.getId() %></th>	<!-- 用对应的get方法，将times类的值返回 -->
 
-			<td><%=times.getTitle() %></td>
+			<th><%=times.getTitle() %></th>
 
-			<td><%=times.getAuthor() %></td>
+			<th><%=times.getAuthor() %></th>
 			
-			<td><%=times.getISBN() %></td>
+			<th><%=times.getIsbn() %></th>
 
-			<td><%=times.getPublisher() %></td>
+			<th><%=times.getPublisher() %></th>
 
-			<td><%=times.getBook_ifo() %></td>
+			<th><%=times.getBook_info() %></th>
 
-			<td><%=times.getChina_type() %></td>
+			<th><%=times.getChina_type() %></th>
 
-			<td><%=times.getScience_type() %></td>
+			<th><%=times.getScience_type() %></th>
 			
+			<th><%=times.getPublish_date() %></th>
 			
-			<td><%=times.getPublish_date() %></td>
+			<th><%=times.getBook_price() %></th>
 			
-			<td><%=times.getBook_price() %></td>
+			<th><%=times.getBook_state() %></th>
 			
-			<td><%=times.getBook_state() %></td>
-
-
+			<th><%=times.getLocation() %></th>
+			<td><a href="editStudent?id=${student.id}">Lookup</a></td>
+			</tr>
 
 			<%
 
