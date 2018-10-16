@@ -21,7 +21,7 @@
 	
 	<div class="baidu" id="fix">
 	
-<form  action="borrowRecordsPageWeb" method="post" name="f" onsubmit="return chkForm(this)" id="f">    
+<form  action="SearchName" method="post" name="f" onsubmit="return chkForm(this)" id="f">    
       <div class="search_bgimg"><!--select class="option" name="choice" style="width:500px;height:35.78px;"BACKGROUND-COLOR: #FFFFF0;color: #003366;>
                                 <option value="title">Title</option>
                                 <option value="author">Author</option>
@@ -29,8 +29,8 @@
                               </select-->
               <input type="hidden" id="historyCount" name="historyCount" value="1" />
           <span class="sone">
-          Please input the phone of reader
-		  <input  type="text" name="reader_phone_search" class="sou" style ="width:500px ;heigh:400px" style="center">
+          Please input the id of reader
+		  <input  type="text" name="strText"class="sou" style ="width:500px ;heigh:400px" style="center">
 		  </span>
 			 <span>
 			<input class="btn" type="submit" value="search">
@@ -78,9 +78,4 @@
     <a href="borrowPage.jsp">Add</a>
    </div>
 </body>
-<script type="text/javascript">
-  $(function(){  
-           location.reload();
-}
-</script>
 </html>
