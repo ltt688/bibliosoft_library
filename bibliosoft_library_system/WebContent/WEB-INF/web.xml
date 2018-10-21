@@ -95,6 +95,14 @@
     <servlet-name>AddBookPage2Servlet</servlet-name>
     <url-pattern>/addBookPage2Web</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>ReturnPageServlet</servlet-name>
+    <servlet-class>servlet.ReturnPageServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReturnPageServlet</servlet-name>
+    <url-pattern>/returnPageWeb</url-pattern>
+  </servlet-mapping>
   
   
 

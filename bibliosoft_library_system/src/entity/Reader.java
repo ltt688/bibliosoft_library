@@ -60,19 +60,12 @@ public class Reader {
 	  public String getYj() {
 		  return yj;
 	  }
-//	  PUBLIC STRING GETSXF() {
-//		  RETURN SXF;
-//	  }
 	  public int getLjjs() {
 		  return ljjs;
 	  }
 	  public String getRule_id() {
 		  return rule_id;
 	  }
-	  
-	  
-	  
-	  
 	  public void setID(String id) {
 		  this.id=id;
 	  }

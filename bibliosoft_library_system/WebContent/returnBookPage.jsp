@@ -34,10 +34,10 @@
 
 				<div class="form-group">
 					<div class="label">
-						<label>Reader ID:</label>
+						<label>Reader Phone:</label>
 					</div>
 					<div class="field">
-						<input type="text" class="input w50" value="" name="reader_id"
+						<input type="text" class="input w50" value="" name="reader_phone"
 							data-validate="required:Please input Reader ID" />
 						<div class="tips"></div>
 					</div>
