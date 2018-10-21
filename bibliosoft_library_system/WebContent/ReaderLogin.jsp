@@ -43,7 +43,7 @@
 							
 								If you have not registered your account, please click  
 							
-							<a href="ReaderUsermain.jsp"><strong>Bibliosoft</strong></a> 
+							<a href="ReaderUsermain1.jsp"><strong>Bibliosoft</strong></a> 
 							
 								to log in. 
 							</h4>
@@ -72,7 +72,7 @@
                         <div class="col-sm-5 form-box">
                         
                             <div class="form-bottom">
-			            <form action="#" class="fh5co-form animate-box" data-animate-effect="fadeInRight">
+			            <form action="login" method="post" class="fh5co-form animate-box" data-animate-effect="fadeInRight">
 						<div class="form-top-left">
                         			<h3>Sign up now</h3>
                             		<p>Please fill in your account and password in the form below.</p>
@@ -82,15 +82,20 @@
                         		</div>
 						<div class="form-group">
 							<label for="username" class="sr-only">Username</label>
-							<input type="text" class="form-control" id="username" placeholder="Username" autocomplete="off">
+							<input type="text" class="form-control" id="reader_phone"  name="reader_phone"   placeholder="reader_phone" autocomplete="off"value="${reader_phone}"/>
 						</div>
 						<div class="form-group">
 							<label for="password" class="sr-only">Password</label>
-							<input type="text" class="form-control" id="password" placeholder="Password" autocomplete="off">
-						<br>
-		
+							<input type="password" class="form-control" id="reader_password" placeholder="reader_password" autocomplete="off"name="reader_password" value="${reader_password}"/ >
+		                <br>
+		               
+		               
 						<div class="form-group">
-							<p><a href="ReaderUsermain.jsp" class="btn btn-primary">Sign In</a> <a href="ReaderForgetpwd1.jsp" class="btn btn-info">Forgot Password?</a></p>
+						    <a href="ReaderForgetpwd1.jsp" class="btn btn-info">RetrievePassword</a>
+							<td><input type="submit" value="Sign In" class="btn btn-primary"/></td>
+			                <br>
+			                <td><font size="2" color="red">${ error }</font></td>
+							
 						</div>
 					</form>
 		                    </div>

@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html lang="zh-cn">
@@ -18,7 +17,7 @@
 <body style="background-color:#f2f9fd;">
 <div class="header bg-main">
   <div class="logo margin-big-left fadein-top">
-    <h4><img src="images/logo1.png" class="radius-circle rotate-hover" height="50" alt="" />Current User: ${currentUser.reader_phone}</h4>
+    <h4><img src="images/logo1.png" class="radius-circle rotate-hover" height="50" alt="" />Not Login</h4>
   </div>
 
 <div class="head-l">
@@ -36,15 +35,6 @@
     <li><a href="ReaderSearch.jsp" target="right"><span class="icon-caret-right"></span>Search Books</a></li>   
     <li><a href="stuList" target="right"><span class="icon-caret-right"></span>Check out Books</a></li>    
   </ul>   
-  <h2><span class="icon-user"></span>Personal Settings</h2>
-  <ul>
-
-    <li>  <a href='PP?name=${currentUser.reader_phone}'><span class="icon-caret-right"></span>Personal Information</a></li>
-    <li><a href="Borrowedhistory.jsp" target="right"><span class="icon-caret-right"></span>Borrowed History</a></li>
-    <li><a href="Returnedhistory.jsp" target="right"><span class="icon-caret-right"></span>Returned History</a></li>
-    <li><a href="Setpwd1.jsp" target="right"><span class="icon-caret-right"></span>Set PassWord</a></li>
-           
-  </ul>  
 </div>
 </div>
 <script type="text/javascript">
