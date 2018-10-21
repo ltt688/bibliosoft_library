@@ -76,7 +76,7 @@
 
 			<div class="login form">
 				<div class="group">
-					<form action="login" method="post">
+					<form action="managerlogin" method="post">
 						<div class="group-ipt email">
 							<input type="text" name="account" id="account" class="ipt"
 								placeholder="please input your account number" required>
