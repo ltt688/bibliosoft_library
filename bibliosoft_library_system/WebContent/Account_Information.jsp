@@ -1,6 +1,8 @@
 
 <%@ page language="java" import="java.util.*"
 	contentType="text/html;charset=GBK" pageEncoding="GBK"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page import ="entity.Librarian" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -90,179 +92,98 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body class='contrast-blue main-nav-closed'>
-	<header>
-		<div class='navbar'>
-			<div class='navbar-inner'>
-				<div class='container-fluid'>
-					<a class='brand' href='calendar.jsp'> 		<img alt='logo' height='30' src='assets/images/logo2.png' width='30' />
-						<span class='hidden-phone'>Bibliosoft</span>
-					</a> <a class='toggle-nav btn pull-left' href='#'> <i
-						class='icon-reorder'></i>
-					</a>
-					<ul class='nav pull-right'>
-						<li class='dropdown light only-icon'><a
-							class='dropdown-toggle' data-toggle='dropdown' href='#'> <i
-								class='icon-adjust'></i>
-						</a>
-							<ul class='dropdown-menu color-settings'>
-								<li class='color-settings-body-color'>
-									<div class='color-title'>Body color</div> <a
-									data-change-to='assets/stylesheets/light-theme.css' href='#'>
-										Light <small>(default)</small>
-								</a> <a data-change-to='assets/stylesheets/dark-theme.css' href='#'>
-										Dark </a> <a
-									data-change-to='assets/stylesheets/dark-blue-theme.css'
-									href='#'> Dark blue </a>
-								</li>
-								<li class='divider'></li>
-								<li class='color-settings-contrast-color'>
-									<div class='color-title'>Contrast color</div> <a href="#"
-									data-change-to="contrast-red"><i
-										class='icon-adjust text-red'></i> Red </a> <a href="#"
-									data-change-to="contrast-blue"><i
-										class='icon-adjust text-blue'></i> Blue <small>(default)</small>
-								</a> <a href="#" data-change-to="contrast-orange"><i
-										class='icon-adjust text-orange'></i> Orange </a> <a href="#"
-									data-change-to="contrast-purple"><i
-										class='icon-adjust text-purple'></i> Purple </a> <a href="#"
-									data-change-to="contrast-green"><i
-										class='icon-adjust text-green'></i> Green </a> <a href="#"
-									data-change-to="contrast-muted"><i
-										class='icon-adjust text-muted'></i> Muted </a> <a href="#"
-									data-change-to="contrast-fb"><i class='icon-adjust text-fb'></i>
-										Facebook </a> <a href="#" data-change-to="contrast-dark"><i
-										class='icon-adjust text-dark'></i> Dark </a> <a href="#"
-									data-change-to="contrast-pink"><i
-										class='icon-adjust text-pink'></i> Pink </a> <a href="#"
-									data-change-to="contrast-grass-green"><i
-										class='icon-adjust text-grass-green'></i> Grass green </a> <a
-									href="#" data-change-to="contrast-sea-blue"><i
-										class='icon-adjust text-sea-blue'></i> Sea blue </a> <a href="#"
-									data-change-to="contrast-banana"><i
-										class='icon-adjust text-banana'></i> Banana </a> <a href="#"
-									data-change-to="contrast-dark-orange"><i
-										class='icon-adjust text-dark-orange'></i> Dark orange </a> <a
-									href="#" data-change-to="contrast-brown"><i
-										class='icon-adjust text-brown'></i> Brown </a>
-								</li>
-							</ul></li>
-						<li class='dropdown dark user-menu'><a
-							class='dropdown-toggle' data-toggle='dropdown' href='#'> <img
-								alt='Mila Kunis' height='23' src='assets/images/123.png'
-								width='23' /> <span class='user-name hidden-phone'>Admin</span>
-								<b class='caret'></b>
-						</a>
-							<ul class='dropdown-menu'>
-								<li><a href=''> <i class='icon-user'></i> Profile
-								</a></li>
-								<li><a href=''> <i class='icon-cog'></i> Settings
-								</a></li>
-								<li class='divider'></li>
-								<li><a href='login.jsp'> <i class='icon-signout'></i> Sign out
-								</a></li>
-							</ul></li>
-					</ul>
-					<form accept-charset="UTF-8" action="search_results.html"
-						class="navbar-search pull-right hidden-phone" method="get" />
-					<div style="margin: 0; padding: 0; display: inline">
-						<input name="utf8" type="hidden" value="&#x2713;" />
-					</div>
-					<button class="btn btn-link icon-search" name="button"
-						type="submit"></button>
-					<input autocomplete="off" class="search-query span2" id="q_header"
-						name="q" placeholder="Search..." type="text" value="" />
-					</form>
-				</div>
-			</div>
-		</div>
-	</header>
+	<% Librarian librarian=(Librarian)request.getAttribute("librarian");%>
 	<div id='wrapper'>
-		<div id='main-nav-bg'></div>
-		<nav class='' id='main-nav'>
-			<div class='navigation'>
-				<div class='search'>
-					<form accept-charset="UTF-8" action="search_results.html"
-						method="get" />
-					<div style="margin: 0; padding: 0; display: inline">
-						<input name="utf8" type="hidden" value="&#x2713;" />
+		
+	
+			<div class='container-fluid'>
+				<div class='row-fluid' id='content-wrapper'>
+					<div class='span12'>
+						<div class='row-fluid'>
+							<div class='span12'>
+								<div class='page-header'>
+									<h1 class='pull-left'>
+										<i class='icon-ok'></i> <span>Admin Information</span>
+									</h1>
+									<div class='pull-right'>
+										<ul class='breadcrumb'>
+											<li><a href="index.html"><i class='icon-bar-chart'></i>
+											</a></li>
+											<li class='separator'><i class='icon-angle-right'></i></li>
+											<li>Account</li>
+											<li class='separator'><i class='icon-angle-right'></i></li>
+											<li class='active'>Account Information</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='row-fluid'>
+							<div class='span12 box'>
+								<div class='box-header blue-background'>
+									<div class='title'>Basic Information</div>
+									<div class='actions'>
+										<a href="#" class="btn box-remove btn-mini btn-link"><i
+											class='icon-remove'></i> </a> <a href="#"
+											class="btn box-collapse btn-mini btn-link"><i></i> </a>
+									</div>
+								</div>
+								<div class='box-content'>
+
+									<form class='form form-horizontal validate-form'
+										style='margin-bottom: 0;' action="editadmin" method="post">
+										<div class='control-group'>
+											<label class='control-label' for='validation_name'>Account</label>
+											<div class='controls'>
+												<input data-rule-minlength='1' data-rule-required='true'
+													id='account' name='account'
+													placeholder='Please input account' type='text'  value="<% out.println(librarian.getManager_ID()); %>"/>
+											</div>
+										</div>
+										<div class='control-group'>
+											<label class='control-label' for='validation_name'>Name</label>
+											<div class='controls'>
+												<input data-rule-minlength='2' data-rule-required='true'
+													id='name' name='name' placeholder='Please input name'
+													type='text' value="<% out.println(librarian.getManager_name()); %>" />
+											</div>
+										</div>
+										<div class='control-group'>
+											<label class='control-label' for='validation_name'>Phone</label>
+											<div class='controls'>
+												<input data-rule-minlength='11' data-rule-required='true'
+													id='phone' name='phone'
+													placeholder='Please input phone number' type='text' value="<% out.println(librarian.getManager_phone()); %>" />
+											</div>
+										</div>
+
+										<div class='control-group'>
+											<label class='control-label' for='validation_name'>Type</label>
+											<div class='controls'>
+												<input data-rule-minlength='1' data-rule-required='true'
+													id='type' name='type' placeholder='Please input type'
+													type='text' value="<% out.println(librarian.getManager_type()); %>"/>
+											</div>
+										</div>
+										<div class='form-actions' style='margin-bottom: 0'>
+											<button class='btn btn-primary' type='submit'>
+												<i class='icon-save'></i> save
+											</button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+
+
 					</div>
-					<div class='search-wrapper'>
-						<input autocomplete="off" class="search-query" id="q" name="q"
-							placeholder="Search..." type="text" value="" />
-						<button class="btn btn-link icon-search" name="button"
-							type="submit"></button>
-					</div>
-					</form>
 				</div>
-				<ul class='nav nav-stacked'>
-					<li class=''><a href='calendar.jsp'> <i
-							class='icon-calendar'></i> <span>Calendar</span>
-					</a></li>
-					<li class=''><a class='dropdown-collapse' href='#'> <i
-							class='icon-edit'></i> <span>Librarian Manage</span> <i
-							class='icon-angle-down angle-down'></i>
-					</a>
-						<ul class='nav nav-stacked'>
-							<li class=''><a href='LibrarianList'> <i
-									class='icon-caret-right'></i> <span>Librarian List</span>
-							</a></li>
-							<li class=''><a href=''> <i
-									class='icon-caret-right'></i> <span>Librarian edit</span>
-							</a></li>
-							<li class=''><a href='Librarian_add.jsp'> <i
-									class='icon-caret-right'></i> <span>Add Librarian</span>
-							</a></li>
-
-						</ul></li>
-<li>
-    <a class='dropdown-collapse ' href='#'>
-        <i class='icon-cogs'></i>
-        <span>Reader Rule</span>
-        <i class='icon-angle-down angle-down'></i>
-    </a>
-    <ul class='nav nav-stacked'>
-        <li class=''>
-            <a href=''>
-                <i class='icon-bar-chart'></i>
-                <span>Rule List</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href=''>
-                <i class='icon-envelope'></i>
-                <span>Rule Edit</span>
-            </a>
-        </li>
-        <li class=''>
-            <a href=''>
-                <i class='icon-comments'></i>
-                <span>Rule Add</span>
-            </a>
-        </li>
-        </ul>
-					<li><a class='dropdown-collapse in' href='#'> <i
-							class='icon-cog'></i> <span>Account</span> <i
-							class='icon-angle-down angle-down'></i>
-					</a>
-						<ul class='in nav nav-stacked'>
-							<li class='active'><a href='Account_Information.jsp'> <i
-									class='icon-caret-right'></i> <span>Account Information</span>
-							</a></li>
-							<li class=''><a href='Account_Edit.jsp'> <i
-									class='icon-caret-right'></i> <span>Edit Information</span>
-							</a></li>
-							<li class=''><a href='login.jsp'> <i class='icon-caret-right'></i>
-									<span>Logout</span>
-							</a></li>
-
-						</ul></li>
-
-
-				</ul>
 			</div>
-		</nav>
-
+		
 	</div>
+	
+	
+	
 	<!-- / jquery -->
 	<script src='assets/javascripts/jquery/jquery.min.js'
 		type='text/javascript'></script>

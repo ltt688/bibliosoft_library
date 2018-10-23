@@ -209,7 +209,7 @@
 							<li class=''><a href='LibrarianList' target="right"> <i
 									class='icon-caret-right'></i> <span>Librarian List</span>
 							</a></li>
-							<li class=''><a href='' target="right"> <i
+							<li class=''><a href='LibrarianList' target="right"> <i
 									class='icon-caret-right'></i> <span>Librarian edit</span>
 							</a></li>
 							<li class=''><a href='Librarian_add.jsp' target="right" > <i
@@ -232,7 +232,7 @@
             </a>
         </li>
         <li class=''>
-            <a href='' target="right">
+            <a href='deleterule' target="right">
                 <i class='icon-envelope' ></i>
                 <span>Rule Edit</span>
             </a>
@@ -253,11 +253,11 @@
 							class='icon-angle-down angle-down'></i>
 					</a>
 						<ul class='nav nav-stacked'>
-							<li class=''><a href='Account_Information.jsp'> <i
+							<li class=''><a href='editadmin' target="right"> <i
 									class='icon-caret-right'></i> <span>Account Information</span>
 							</a></li>
-							<li class=''><a href='Account_Edit.jsp'> <i
-									class='icon-caret-right'></i> <span>Edit Information</span>
+							<li class=''><a href='Account_Edit.jsp' target="right"> <i
+									class='icon-caret-right'></i> <span>Reset Password</span>
 							</a></li>
 							<li class=''><a href='login.jsp'> <i class='icon-caret-right'></i>
 									<span>Logout</span>
@@ -267,12 +267,12 @@
 				</ul>
 			</div>
 		</nav>
-		
+		<section id="content">
 			<div >
 		<iframe scrolling="no" frameborder="0" src="#" name="right" 
-			width="1139.9px" height="1200px"></iframe>
+			width="100%" height="1200px"></iframe>
 			</div>
-		
+		</section>
 	</div>
 	<!-- / jquery -->
 	<script src='assets/javascripts/jquery/jquery.min.js'

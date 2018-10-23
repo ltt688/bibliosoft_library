@@ -103,7 +103,22 @@
     <servlet-name>ReturnPageServlet</servlet-name>
     <url-pattern>/returnPageWeb</url-pattern>
   </servlet-mapping>
-  
+  <servlet>
+    <servlet-name>AdminIfoServlet</servlet-name>
+    <servlet-class>servlet.AdminIfoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminIfoServlet</servlet-name>
+    <url-pattern>/editadmin</url-pattern>
+    </servlet-mapping>
+  <servlet>
+  <servlet-name>ResetAdminPasswordServlet</servlet-name>
+  <servlet-class>servlet.ResetAdminPasswordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ResetAdminPasswordServlet</servlet-name>
+  <url-pattern>/resetadminpassword</url-pattern>
+  </servlet-mapping>
   
 
 

@@ -18,7 +18,7 @@ public class AddLibrarian {
 			Statement stmt = conn.createStatement();
 			ResultSet rs = stmt.executeQuery(sql);
 			while (rs.next()) {
-				String userNameInDB = rs.getString("Manager_ID");
+				String userNameInDB = rs.getString("manager_id");
 				if (userNameInDB.equals(account)) {
 					returnValue = false;
 					break;
@@ -30,21 +30,21 @@ public class AddLibrarian {
 		return returnValue;
 	}
 
-	public void addUser(Librarian librarian) {
+	public void addUser(String account,String name,String password,String phone,String type) {
 		Connection connection = null;
 		try {
 			connection = utils.DBHelper.getInstance().getConnection();
 
-			String sql = "insert into Manager values(?,?,?,?,?);";
+			String sql = "insert into manager values(?,?,?,?,?);";
 
 			PreparedStatement ps = connection.prepareStatement(sql);
 
-			// 运用实体对象进行参数赋值
-			ps.setString(1, librarian.getManager_ID());
-			ps.setString(2, librarian.getManager_name());
-			ps.setString(3, librarian.getManager_password());
-			ps.setString(4, librarian.getManager_phone());
-			ps.setString(5, librarian.getManager_type());
+			ps.setString(1, account);
+			ps.setString(2, name);
+			ps.setString(3, password);
+			System.out.println(password);
+			ps.setString(4, phone);
+			ps.setString(5, type);
 			ps.executeUpdate();
 			utils.DBHelper.closeConnection(connection, ps, null);
 		} catch (SQLException e) {

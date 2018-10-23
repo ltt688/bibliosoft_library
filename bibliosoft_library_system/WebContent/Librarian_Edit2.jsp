@@ -1,6 +1,8 @@
 
 <%@ page language="java" import="java.util.*"
 	contentType="text/html;charset=GBK" pageEncoding="GBK"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page import ="entity.Librarian" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -136,16 +138,14 @@
 										style='margin-bottom: 0;' />
 
 
-									<%
-				        String id=request.getAttribute("Librarian_id").toString();
-				        %>
+								<% Librarian librarian=(Librarian)request.getAttribute("librarian");%>
 									<div class='control-group'>
 										<label class='control-label' for='validation_name'>LibraryID</label>
 										<div class='controls'>
 											<input data-rule-minlength='2' data-rule-required='true'
 												id='name'
-												value=<%=request.getAttribute("Librarian_id").toString() %>
-												placeholder='Please input name' type='text' />
+												value=<% out.println(librarian.getManager_ID()); %>
+												placeholder='Please input name' type='text' readonly="readonly" />
 										</div>
 
 									</div>
@@ -154,7 +154,7 @@
 										<div class='controls'>
 											<input data-rule-minlength='2' data-rule-required='true'
 												id='name' name='name' placeholder='Please input name'
-												type='text' />
+												type='text' value="<% out.println(librarian.getManager_name()); %>"/>
 										</div>
 									</div>
 
@@ -164,7 +164,7 @@
 										<div class='controls'>
 											<input data-rule-minlength='11' data-rule-required='true'
 												id='phone' name='phone'
-												placeholder='Please input phone number' type='text' />
+												placeholder='Please input phone number' type='text'  value="<% out.println(librarian.getManager_phone()); %>"/>
 										</div>
 									</div>
 									<div class='control-group'>
@@ -173,7 +173,7 @@
 											<input data-rule-minlength='6' data-rule-password='true'
 												data-rule-required='true' id='validation_password'
 												name='validation_password' placeholder='Password'
-												type='password' />
+												type='password' value="<% out.println(librarian.getManager_password()); %>"/>
 										</div>
 									</div>
 									<div class='control-group'>
@@ -185,7 +185,7 @@
 												data-rule-required='true'
 												id='validation_password_confirmation'
 												name='validation_password_confirmation'
-												placeholder='Password confirmation' type='password' />
+												placeholder='Password confirmation' type='password' value="<% out.println(librarian.getManager_password()); %>" />
 										</div>
 									</div>
 									<div class='control-group'>
@@ -193,7 +193,7 @@
 										<div class='controls'>
 											<input data-rule-minlength='1' data-rule-required='true'
 												id='type' name='type' placeholder='Please input type'
-												type='text' />
+												type='text' value="<% out.println(librarian.getManager_type()); %>"/>
 										</div>
 									</div>
 									<div class='form-actions' style='margin-bottom: 0'>

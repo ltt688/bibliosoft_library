@@ -55,5 +55,30 @@ public class EditLibrarianDao {
 
 		return jian;
 	}
+	public boolean updateadmin(String name,String phone,String type,String account)
+	{
+		boolean jian = false;
+		try {
+
+			Connection c = DBHelper.getInstance().getConnection();
+
+			String sql = "update user_login set Manager_name=?  Manager_phone Manager_type=?  where Manager_ID=? ";
+			PreparedStatement ps = c.prepareStatement(sql);
+			ps.setString(1, name);
+			ps.setString(2, phone);
+			ps.setString(3, type);
+			ps.setString(4, account);
+
+			ps.executeUpdate();
+
+			jian = true;
+			DBHelper.closeConnection(c, ps, null);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return jian;
+	}
 
 }

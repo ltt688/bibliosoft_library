@@ -83,4 +83,63 @@ public class LibrarianDao {
 
 		return librarians;
 	}
+	
+	public Librarian ifo()
+	{
+		Librarian librarian = new Librarian();
+		try {
+
+			Connection c = DBHelper.getInstance().getConnection();
+
+			String sql = "select * from manager where Manager_type='admin'";
+
+			PreparedStatement ps = c.prepareStatement(sql);
+
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+
+				librarian.setManager_ID(rs.getString("Manager_ID"));
+				librarian.setManager_name(rs.getString("Manager_name"));
+				librarian.setManager_phone(rs.getString("Manager_phone"));
+				librarian.setManager_type(rs.getString("Manager_type"));
+				librarian.setManager_password(rs.getString("Manager_password"));
+				System.out.println(librarian.getManager_ID());
+			}
+			DBHelper.closeConnection(c, ps, rs);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return librarian;
+
+	}
+	public Librarian librarianifo(String id)
+	{
+		Librarian librarian = new Librarian();
+		try {
+
+			Connection c = DBHelper.getInstance().getConnection();
+
+			String sql = "select * from manager where Manager_id='"+id+"'";
+
+			PreparedStatement ps = c.prepareStatement(sql);
+
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+
+				librarian.setManager_ID(rs.getString("Manager_ID"));
+				librarian.setManager_name(rs.getString("Manager_name"));
+				librarian.setManager_phone(rs.getString("Manager_phone"));
+				librarian.setManager_type(rs.getString("Manager_type"));
+				librarian.setManager_password(rs.getString("Manager_password"));
+				System.out.println(librarian.getManager_ID());
+			}
+			DBHelper.closeConnection(c, ps, rs);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return librarian;
+
+	}
 }

@@ -154,27 +154,7 @@
 													placeholder='Please input phone number' type='text' />
 											</div>
 										</div>
-										<div class='control-group'>
-											<label class='control-label' for='validation_password'>Password</label>
-											<div class='controls'>
-												<input data-rule-minlength='6' data-rule-password='true'
-													data-rule-required='true' id='validation_password'
-													name='validation_password' placeholder='Password'
-													type='password' />
-											</div>
-										</div>
-										<div class='control-group'>
-											<label class='control-label'
-												for='validation_password_confirmation'>Password
-												confirmation</label>
-											<div class='controls'>
-												<input data-rule-equalto='#validation_password'
-													data-rule-required='true'
-													id='validation_password_confirmation'
-													name='validation_password_confirmation'
-													placeholder='Password confirmation' type='password' />
-											</div>
-										</div>
+
 										<div class='control-group'>
 											<label class='control-label' for='validation_name'>Type</label>
 											<div class='controls'>

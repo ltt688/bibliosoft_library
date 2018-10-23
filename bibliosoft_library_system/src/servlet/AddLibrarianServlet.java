@@ -43,20 +43,23 @@ public class AddLibrarianServlet extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		String account = request.getParameter("account");
 		String name = request.getParameter("name");
-		String password = request.getParameter("validation_password");
+		String password="00010001";
+		System.out.println(password);
 		String phone = request.getParameter("phone");
 		String type = request.getParameter("type");
 		AddLibrarian ld = new AddLibrarian();
 		boolean can = ld.CanAdd(account);
 		if (can) {
 			Librarian librarian = new Librarian();
-			librarian.setManager_ID(account);
-			librarian.setManager_name(name);
-			librarian.setManager_password(password);
-			librarian.setManager_phone(phone);
-			librarian.setManager_type(type);
+//			librarian.setManager_ID(account);
+//			librarian.setManager_name(name);
+//			librarian.setManager_password("00010001");
+//			System.out.println(librarian.getManager_password());
+//			librarian.setManager_phone(phone);
+//			librarian.setManager_type(type);
 			AddLibrarian librariandao = new AddLibrarian();
-			librariandao.addUser(librarian);
+			System.out.println(password);
+			librariandao.addUser(account,name,password,phone,type);
 			response.sendRedirect("Librarian_add.jsp?tishi=yes");
 		} else {
 			response.sendRedirect("Librarian_add.jsp?tishi=no");
