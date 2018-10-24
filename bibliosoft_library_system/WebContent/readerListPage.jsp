@@ -27,7 +27,7 @@
 				<th width="9%">Reader phone</th>
 				<th width="10%">Reader banzheng_date</th>
 				<th width="10%">Reader shengxiao_date</th>
-				<th width="9%">Reader guoqi_date</th>
+				<th width="9%">Reader daoqi_date</th>
 				<th width="9%">Reader yj</th>
 				<th width="9%">Reader Email</th>
 				<th width="9%">Reader ljjs</th>
@@ -42,7 +42,7 @@
 					<td>${reader.phone}</td>
 					<td>${reader.getBanZheng_date()}</td>
 					<td>${reader.getShengXiao_date()}</td>
-					<td>${reader.getGuoQi_date()}</td>
+					<td>${reader.getDaoQi_date()}</td>
 					<td>${reader.getYj()}</td>
 					<td>${reader.getEmail()}</td>
 					<td>${reader.getLjjs()}</td>

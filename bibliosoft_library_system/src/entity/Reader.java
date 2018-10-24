@@ -9,7 +9,7 @@ public class Reader {
 	private String email;
 	private String banzheng_date;
 	private String shengxiao_date;
-	private String guoqi_date;
+	private String daoqi_date;
 	private String yj;
 
 	private int ljjs;
@@ -17,7 +17,7 @@ public class Reader {
 	public Reader(){
 		
 	}
-	public Reader(String id, String name ,String password,String phone,String email,String banzheng_date,String shengxiao_date,String guoqi_date,String yj,int ljjs,String rule_id){
+	public Reader(String id, String name ,String password,String phone,String email,String banzheng_date,String shengxiao_date,String daoqi_date,String yj,int ljjs,String rule_id){
 		this.id=id;
 		this.name=name;
 		this.password=password;
@@ -25,7 +25,7 @@ public class Reader {
 		this.email=email;
 		this.banzheng_date=banzheng_date;
 		this.shengxiao_date=shengxiao_date;
-		this.guoqi_date=guoqi_date;
+		this.daoqi_date=daoqi_date;
 		this.yj=yj;
 		//this.sxf=sxf;
 		this.ljjs=ljjs;
@@ -54,8 +54,8 @@ public class Reader {
 	  public String getShengXiao_date() {
 		  return shengxiao_date;
 	  }
-	  public String getGuoQi_date() {
-		  return guoqi_date;
+	  public String getDaoQi_date() {
+		  return daoqi_date;
 	  }
 	  public String getYj() {
 		  return yj;
@@ -85,8 +85,8 @@ public class Reader {
 	  public void setShengXiao_date(String shengxiao_date) {
 		  this.shengxiao_date=shengxiao_date;
 	  }
-	  public void setGuoQi_date(String guoqi_date) {
-		  this.guoqi_date=guoqi_date;
+	  public void setDaoQi_date(String daoqi_date) {
+		  this.daoqi_date=daoqi_date;
 	  }
 	  public void setYj(String yj) {
 		  this.yj=yj;
