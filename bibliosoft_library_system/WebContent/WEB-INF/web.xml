@@ -271,7 +271,75 @@
     <url-pattern>/SearchAuthor</url-pattern>
   </servlet-mapping>
 
-
+   <description></description>
+    <display-name>AddressServlet</display-name>
+    <servlet-name>AddressServlet</servlet-name>
+    <servlet-class>servlet.AddressServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddressServlet</servlet-name>
+    <url-pattern>/AddressServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SetpwdServlet</display-name>
+    <servlet-name>SetpwdServlet</servlet-name>
+    <servlet-class>servlet.SetpwdServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SetpwdServlet</servlet-name>
+    <url-pattern>/SetpwdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SetpersonServlet</display-name>
+    <servlet-name>SetpersonServlet</servlet-name>
+    <servlet-class>servlet.SetpersonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SetpersonServlet</servlet-name>
+    <url-pattern>/SetpersonServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DisplaypersonServlet</display-name>
+    <servlet-name>DisplaypersonServlet</servlet-name>
+    <servlet-class>servlet.DisplaypersonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DisplaypersonServlet</servlet-name>
+    <url-pattern>/PE</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BorrowServlet</display-name>
+    <servlet-name>BorrowServlet</servlet-name>
+    <servlet-class>servlet.BorrowServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BorrowServlet</servlet-name>
+    <url-pattern>/BorrowServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RetuenServlet</display-name>
+    <servlet-name>RetuenServlet</servlet-name>
+    <servlet-class>servlet.RetuenServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RetuenServlet</servlet-name>
+    <url-pattern>/RetuenServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>OrderServlet</display-name>
+    <servlet-name>OrderServlet</servlet-name>
+    <servlet-class>servlet.OrderServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>OrderServlet</servlet-name>
+    <url-pattern>/OrderServlet</url-pattern>
+  </servlet-mapping>
 
 
 
