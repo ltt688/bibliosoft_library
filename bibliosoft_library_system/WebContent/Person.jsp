@@ -42,10 +42,13 @@ if(b.getReader_phone().equals(name)){%>
 			
 				<li><span>Name</span>:<% out.println(b.getReader_name());%></li>
 				<li><span>Phone/Username</span>:<% out.println(b.getReader_phone());%></li>
+				<li><span>Birthday</span>:<% out.println(b.getReader_birthday());%></li>
 				<li><span>Email</span>:<% out.println(b.getReader_email());%></li>
+				<li><span>Address</span>:<% out.println(b.getReader_address());%></li>
 				<li><span>Deposit</span>: <% out.println(b.getYj());%></li>
 				<li><span>Accumulative loan book</span>:<% out.println(b.getLjjs());%></li>
-				<li><span>Reader rules ID</span>:<% out.println(b.getRule_id());%></li>
+				<li><span>ReaderRuleID</span>:<% out.println(b.getRule_id());%></li>
+				<li></li>
 				<li><span>Date of borrowing documents</span>: <% out.println(b.getBanzheng_date());%></li>
 				</li>
 
@@ -64,9 +67,9 @@ if(b.getReader_phone().equals(name)){%>
 <!-- mid -->
 <section class="mid-w3layouts">
 	<div class="container">
-		<h6>Iam available for freelance projects.</h6>
-		<h3>Let's <span>work</span> together indeed!</h3>
-		<a href="#contact" class="scroll">Get quotes</a>
+		<h6>You can modify the information here.</h6>
+		<h3>Click <span>the</span> bottom button.!</h3>
+		<a href='PE?phone=<%=b.getReader_phone()%>' class="scroll">Modify information</a>
 	</div>
 </section>
 <!-- //mid -->
