@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" import="java.util.*"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -31,46 +32,41 @@ style="background-repeat:no-repeat;background-size:100% 100%;background-attachme
 
 <form>
         <select onchange="window.location=this.value;">
-            <option value="Borrowhistory.jsp">Borrowed books </option>
-            <option value="Returnedhistory.jsp">Returned books </option>
+            <option value="BorrowServlet">Borrowed books </option>
+            <option value="RetuenServlet">Returned books </option>
         </select>
     </form>
 
 
 <div>
 
-<p>
+
 <table cellpadding="10"  style="border-collapse:collapse;" background="images/timg.jpg" align="center">
-<tr>
-<th>Already borrowed </th>
-<th>Hours of loan service </th>
-<th>Expiry time </th>
-<th>State </th>
-</tr>
-
-<tr>
-<td>百年孤独</td>
-<td>1998.12.30</td>
-<td>1999.1.29</td>
-<td>超期</td>
-</tr>
-
-<tr>
-<td>雷野的幸福生活</td>
-<td>2018.9.18</td>
-<td>2018.10.17</td>
-<td>期内</td>
-</tr>
-
-<tr>
-<td>李大娘带你健♂身</td>
-<td>2016.9.8</td>
-<td>2016.10.7</td>
-<td>超期</td>
-</tr>
+	<tr>
+		 					<td>borrow_id</td>
+							<td>reader_phone</td>
+							<td>book_id</td>
+							<td>borrow_date</td>
+							<td>deadline_date</td>
+							<td>return_date</td>
+							<td>borrow_state</td>
+	</tr>
+	<c:forEach items="${students}" var="student" varStatus="st">
+	<c:if test="${student.borrow_state eq 'borrow'}">
+		<tr>
+			<td>${student.borrow_id}</td>
+			<td>${student.reader_phone}</td>
+			<td>${student.book_id}</td>
+			<td>${student.borrow_date}</td>
+			<td>${student.deadline_date}</td>
+			<td>${student.return_date}</td>
+			<td>${student.borrow_state}</td>
+		</tr>
+		</c:if>
+	</c:forEach>
 
 </table>
-</p>
+
 </div>
 
 
