@@ -23,7 +23,7 @@ public class EditReaderPageServlet extends HttpServlet{
 		String phone=req.getParameter("phone");
 		String banzheng_date=req.getParameter("banzheng_date");
 		String shengxiao_date=req.getParameter("shengxiao_date");
-		String guoqi_date=req.getParameter("guoqi_date");
+		String daoqi_date=req.getParameter("daoqi_date");
 		String yj=req.getParameter("yj");
 		String email=req.getParameter("email");
 		String Ljjs=req.getParameter("ljjs");
@@ -32,7 +32,7 @@ public class EditReaderPageServlet extends HttpServlet{
 		
 		req.setAttribute("reader_id",id);
 		String sql="update readerListTable set reader_name='"+name+"' , reader_password='"+password+"' ,reader_email='"+email+"',reader_phone='"+phone+"',"
-				+ "shengxiao_date='"+shengxiao_date+"',banzheng_date='"+banzheng_date+"',guoqi_date='"+guoqi_date+"',yj='"+yj+"',"
+				+ "shengxiao_date='"+shengxiao_date+"',banzheng_date='"+banzheng_date+"',daoqi_date='"+daoqi_date+"',yj='"+yj+"',"
 						+ "ljjs='"+ljjs+"',rule_id='"+rule_id+"' where id='"+id+"'";
 		try {
 

@@ -37,7 +37,6 @@ public class ReaderListPageServlet extends HttpServlet{
 		String delete_id=req.getParameter("delete_id");
 		String sql="delete from readerListTable where id='"+delete_id+"' ";
 		try {
-
 			Connection c = DBHelper.getInstance().getConnection();
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.execute();

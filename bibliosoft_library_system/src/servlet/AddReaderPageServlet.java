@@ -8,12 +8,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import java.lang.*;
 import dao.ReaderDAO;
 import entity.Reader;
 import utils.DBHelper;
 
 public class AddReaderPageServlet extends HttpServlet{
+	
 	private ReaderDAO readerDAO = ReaderDAO.getInstance();
 
 	@Override
@@ -21,6 +22,7 @@ public class AddReaderPageServlet extends HttpServlet{
 		req.getRequestDispatcher("addReaderPage.jsp").forward(req, resp);
 	}
 
+	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String name=req.getParameter("reader_name");
@@ -28,7 +30,7 @@ public class AddReaderPageServlet extends HttpServlet{
 		String phone=req.getParameter("phone");
 		String banzheng_date=req.getParameter("banzheng_date");
 		String shengxiao_date=req.getParameter("shengxiao_date");
-		String guoqi_date=req.getParameter("guoqi_date");
+		String daoqi_date=req.getParameter("daoqi_date");
 		String yj=req.getParameter("yj");
 		String email=req.getParameter("email");
 		String Ljjs=req.getParameter("ljjs");
@@ -36,9 +38,8 @@ public class AddReaderPageServlet extends HttpServlet{
 		int count=readerDAO.getTotal();
 		count=count+1;
 		int ljjs=Integer.parseInt(Ljjs);
-		String sql="insert into readerListTable values ('"+count+"','"+phone+"','"+password+"','"+name+"','"+email+"','"+banzheng_date+"'	,'"+shengxiao_date+"','"+guoqi_date+"',"
-				+ "'"+yj+"','"+ljjs+"','"+rule_id+"')";
-	
+		String sql="insert into readerListTable values ('"+count+"','"+phone+"','"+password+"','"+name+"','"+email+"','"+banzheng_date+"','"+shengxiao_date+"','"+daoqi_date+"','"+yj+"','"+ljjs+"','"+rule_id+"')";
+
 		
 		try {
 

@@ -98,11 +98,11 @@
 				</div>
 				<div class="form-group">
 					<div class="label">
-						<label>Guoqi date:</label>
+						<label>Daoqi date:</label>
 					</div>
 					<div class="field">
-						<input type="text" class="input w50" value="" name="guoqi_date"
-							data-validate="required:Please input guoqi_date" />
+						<input type="text" class="input w50" value="" name="daoqi_date"
+							data-validate="required:Please input daoqi_date" />
 						<div class="tips"></div>
 					</div>
 				</div>

@@ -58,16 +58,6 @@
 				</div>
 				<div class="form-group">
 					<div class="label">
-						<label>Shengxiao date:</label>
-					</div>
-					<div class="field">
-						<input type="text" class="input w50" value="" name="shengxiao_date"
-							data-validate="required:Please input shengxiao_date" />
-						<div class="tips"></div>
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="label">
 						<label>Banzheng date:</label>
 					</div>
 					<div class="field">
@@ -78,11 +68,22 @@
 				</div>
 				<div class="form-group">
 					<div class="label">
-						<label>Guoqi date:</label>
+						<label>Shengxiao date:</label>
 					</div>
 					<div class="field">
-						<input type="text" class="input w50" value="" name="guoqi_date"
-							data-validate="required:Please input guoqi_date" />
+						<input type="text" class="input w50" value="" name="shengxiao_date"
+							data-validate="required:Please input shengxiao_date" />
+						<div class="tips"></div>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="label">
+						<label>daoqi date:</label>
+					</div>
+					<div class="field">
+						<input type="text" class="input w50" value="" name="daoqi_date"
+							data-validate="required:Please input daoqi_date" />
 						<div class="tips"></div>
 					</div>
 				</div>
