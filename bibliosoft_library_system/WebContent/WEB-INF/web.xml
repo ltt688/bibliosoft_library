@@ -246,6 +246,22 @@
 		<servlet-name>BorrowPageServlet</servlet-name>
 		<url-pattern>/borrowPageWeb</url-pattern>
 	</servlet-mapping>
+	<servlet>
+		<servlet-name>ReaderRequrementsServlet</servlet-name>
+		<servlet-class>servlet.ReaderRequrementsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReaderRequrementsServlet</servlet-name>
+		<url-pattern>/readerRequrementsWeb</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>PunishServlet</servlet-name>
+		<servlet-class>servlet.PunishServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PunishServlet</servlet-name>
+		<url-pattern>/punishWeb</url-pattern>
+	</servlet-mapping>
 
 
 

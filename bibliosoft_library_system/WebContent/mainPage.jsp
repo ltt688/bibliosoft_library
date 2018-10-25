@@ -46,9 +46,9 @@
 					class="icon-caret-right"></span>Create/Delete Reader</a></li>
 			<li><a href="borrowRecordsPageWeb" target="right"><span
 					class="icon-caret-right"></span>Borrow Records</a></li>		
-			<li><a href="#" target="right"><span
+			<li><a href="readerRequrementsWeb" target="right"><span
 					class="icon-caret-right"></span>Reader Requrements</a></li>
-			<li><a href="#" target="right"><span
+			<li><a href="punishWeb" target="right"><span
 					class="icon-caret-right"></span>Reader Punishments</a></li>
 		</ul>
 			<h2>
