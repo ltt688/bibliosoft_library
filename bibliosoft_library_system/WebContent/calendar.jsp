@@ -215,6 +215,9 @@
 							<li class=''><a href='Librarian_add.jsp' target="right" > <i
 									class='icon-caret-right'></i> <span>Librarian Add</span>
 							</a></li>
+								<li class=''><a href='Retrieve_Password.jsp' target="right" > <i
+									class='icon-caret-right'></i> <span>Retrieve Password</span>
+							</a></li>
 
 						</ul></li>
 						

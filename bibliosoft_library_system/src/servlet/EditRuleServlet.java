@@ -23,7 +23,8 @@ public class EditRuleServlet extends HttpServlet{
 		String return_period=req.getParameter("return_period");
 		String deposit=req.getParameter("deposit");
 		//String type=req.getParameter("type");
-		req.setAttribute("Rule_id",rule_id);
+		Rule rule=new Rule(rule_id,fine,return_period,deposit);
+		req.setAttribute("rule",rule);
 		String sql="update reader_rule set fine='"+fine+"' , return_period='"+return_period+"' , deposit='"+deposit+"' where  Rule_ID='"+rule_id+"'";
 		try {
 
@@ -41,7 +42,8 @@ public class EditRuleServlet extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String rule_id=req.getParameter("edit_id");
 		now_id=rule_id;
-		req.setAttribute("Rule_id",rule_id);
+		Rule rule=ruleDao.ruleifo(rule_id);
+		req.setAttribute("rule",rule);
 		req.getRequestDispatcher("Rule_Edit.jsp").forward(req, resp);
 	}
 	

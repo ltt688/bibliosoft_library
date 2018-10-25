@@ -143,7 +143,7 @@
 										<label class='control-label' for='validation_name'>LibraryID</label>
 										<div class='controls'>
 											<input data-rule-minlength='2' data-rule-required='true'
-												id='name'
+												id='name' name='name'
 												value=<% out.println(librarian.getManager_ID()); %>
 												placeholder='Please input name' type='text' readonly="readonly" />
 										</div>
@@ -173,7 +173,7 @@
 											<input data-rule-minlength='6' data-rule-password='true'
 												data-rule-required='true' id='validation_password'
 												name='validation_password' placeholder='Password'
-												type='password' value="<% out.println(librarian.getManager_password()); %>"/>
+												type='text' value="<% out.println(librarian.getManager_password()); %>"/>
 										</div>
 									</div>
 									<div class='control-group'>
@@ -185,7 +185,7 @@
 												data-rule-required='true'
 												id='validation_password_confirmation'
 												name='validation_password_confirmation'
-												placeholder='Password confirmation' type='password' value="<% out.println(librarian.getManager_password()); %>" />
+												placeholder='Password confirmation' type='text' value="<% out.println(librarian.getManager_password()); %>" />
 										</div>
 									</div>
 									<div class='control-group'>

@@ -45,23 +45,19 @@ public class LibrarianDao {
 		return total;
 	}
 
-	public List<Librarian> list() {
-		return list(0, Short.MAX_VALUE);
-	}
 
-	public List<Librarian> list(int start, int count) {
+
+	public List<Librarian> list() {
 		List<Librarian> librarians = new ArrayList<Librarian>();
 
 		try {
 
 			Connection c = DBHelper.getInstance().getConnection();
 
-			String sql = "select * from manager order by manager_id desc limit ?,? ";
+			String sql = "select * from manager where manager_type !='admin' ";
 
 			PreparedStatement ps = c.prepareStatement(sql);
-			ps.setInt(1, start);
-
-			ps.setInt(2, count);
+			
 
 			ResultSet rs = ps.executeQuery();
 
@@ -75,6 +71,7 @@ public class LibrarianDao {
 				librarian.setManager_password(rs.getString("Manager_password"));
 
 				librarians.add(librarian);
+				System.out.println(librarian.getManager_ID());
 			}
 			DBHelper.closeConnection(c, ps, rs);
 		} catch (Exception e) {
@@ -141,5 +138,165 @@ public class LibrarianDao {
 		}
 		return librarian;
 
+	}
+	public List<Librarian> search(String key)
+	{
+		List<Librarian> librarians1=new ArrayList<Librarian>();
+		try
+		{
+			if(key==null)
+			{
+				librarians1=list();
+			}
+			if(key=="")
+			{
+				librarians1=list();
+		
+				
+			}
+			else{
+				List<Librarian> librarians=getbylibrarianid(key);
+				for(Librarian l:librarians)
+				{
+					librarians1.add(l);
+				}
+			}
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return librarians1;
+	}
+	public List<Librarian> getbylibrarianid(String key)
+	{
+		List<Librarian> librarians = new ArrayList<Librarian>();
+
+		try {
+
+			Connection c = DBHelper.getInstance().getConnection();
+
+			String sql = "select * from manager  where manager_id='"+key+"' and manager_id!='admin'";
+
+			PreparedStatement ps = c.prepareStatement(sql);
+			
+
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				Librarian librarian = new Librarian();
+
+				librarian.setManager_ID(rs.getString("Manager_ID"));
+				librarian.setManager_name(rs.getString("Manager_name"));
+				librarian.setManager_phone(rs.getString("Manager_phone"));
+				librarian.setManager_type(rs.getString("Manager_type"));
+				librarian.setManager_password(rs.getString("Manager_password"));
+
+				librarians.add(librarian);
+			}
+			DBHelper.closeConnection(c, ps, rs);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return librarians;
+	}
+	public List<Librarian> getbylibrarianname(String key)
+	{
+		List<Librarian> librarians = new ArrayList<Librarian>();
+
+		try {
+
+			Connection c = DBHelper.getInstance().getConnection();
+
+			String sql = "select * from manager  where manager_name='"+ key+"'";
+
+			PreparedStatement ps = c.prepareStatement(sql);
+			
+
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				Librarian librarian = new Librarian();
+
+				librarian.setManager_ID(rs.getString("Manager_ID"));
+				librarian.setManager_name(rs.getString("Manager_name"));
+				librarian.setManager_phone(rs.getString("Manager_phone"));
+				librarian.setManager_type(rs.getString("Manager_type"));
+				librarian.setManager_password(rs.getString("Manager_password"));
+
+				librarians.add(librarian);
+			}
+			DBHelper.closeConnection(c, ps, rs);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return librarians;
+	}
+	public List<Librarian> getbylibrarianphone(String key)
+	{
+		List<Librarian> librarians = new ArrayList<Librarian>();
+
+		try {
+
+			Connection c = DBHelper.getInstance().getConnection();
+
+			String sql = "select * from manager  where manager_phone='"+key+"' ";
+
+			PreparedStatement ps = c.prepareStatement(sql);
+			
+
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				Librarian librarian = new Librarian();
+
+				librarian.setManager_ID(rs.getString("Manager_ID"));
+				librarian.setManager_name(rs.getString("Manager_name"));
+				librarian.setManager_phone(rs.getString("Manager_phone"));
+				librarian.setManager_type(rs.getString("Manager_type"));
+				librarian.setManager_password(rs.getString("Manager_password"));
+
+				librarians.add(librarian);
+			}
+			DBHelper.closeConnection(c, ps, rs);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return librarians;
+	}
+	public List<Librarian> getbylibrariantype(String key)
+	{
+		List<Librarian> librarians = new ArrayList<Librarian>();
+
+		try {
+
+			Connection c = DBHelper.getInstance().getConnection();
+
+			String sql = "select * from manager  where manager_type='"+ key+"'";
+
+			PreparedStatement ps = c.prepareStatement(sql);
+			
+
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				Librarian librarian = new Librarian();
+
+				librarian.setManager_ID(rs.getString("Manager_ID"));
+				librarian.setManager_name(rs.getString("Manager_name"));
+				librarian.setManager_phone(rs.getString("Manager_phone"));
+				librarian.setManager_type(rs.getString("Manager_type"));
+				librarian.setManager_password(rs.getString("Manager_password"));
+
+				librarians.add(librarian);
+			}
+			DBHelper.closeConnection(c, ps, rs);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return librarians;
 	}
 }

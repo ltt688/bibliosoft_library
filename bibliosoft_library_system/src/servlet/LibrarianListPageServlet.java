@@ -19,17 +19,12 @@ public class LibrarianListPageServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html; charset=UTF-8");
-
-		int start = 0;
-		int count = 5; 
-
-		try {
-			start = Integer.parseInt(req.getParameter("start"));
-		} catch (NumberFormatException e) {
-		}
-		List<Librarian> librarians = librarianDao.list(start, count);
+		String key=req.getParameter("key");
+		List<Librarian> librarians = librarianDao.search(key);
+		
 
 		req.setAttribute("librarians", librarians); 
+		
 		req.getRequestDispatcher("Librarian_List.jsp").forward(req, resp);
 	}
 

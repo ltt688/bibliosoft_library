@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.util.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page import ="entity.Librarian" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -127,9 +128,28 @@
 											class="btn box-collapse btn-mini btn-link"><i></i> </a>
 									</div>
 								</div>
+								
 								<div class='box-content box-no-padding'>
 									<div class='responsive-table'>
 										<div class='scrollable-area'>
+					<div>
+					<form  action="LibrarianList" method="get" />
+
+					<div class='control-group'>
+										<label class='control-label' for='validation_name'></label>
+										<div class='controls'>
+											<input data-rule-minlength='2' data-rule-required='true'
+												id='=key' name='key' placeholder='Search by id'
+												type='text' />
+													<button class="btn btn-link icon-search" name="button"
+						type="submit"></button>
+										</div>
+									
+						
+				
+						</div>
+					</form>
+					</div>
 											<table class='table' style='margin-bottom: 0;'>
 												<thead>
 													<tr>
@@ -142,8 +162,8 @@
 													</tr>
 												</thead>
 												<tbody>
-													<c:forEach items="${librarians}" var="librarian"
-														varStatus="li">
+												<%List<Librarian> librarians=(List<Librarian>)request.getAttribute("librarians") ;%>
+													<c:forEach items="${librarians}" var="librarian" varStatus="li">
 														<tr>
 															<td>${librarian.getManager_ID()}</td>
 															<td>${librarian.getManager_name()}</td>
@@ -164,6 +184,8 @@
 													</c:forEach>
 												</tbody>
 											</table>
+											<div>
+</div>
 										</div>
 									</div>
 								</div>

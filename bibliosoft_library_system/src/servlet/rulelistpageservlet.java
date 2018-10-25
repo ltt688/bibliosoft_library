@@ -23,16 +23,8 @@ public class  rulelistpageservlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html; charset=UTF-8");
-
-		int start = 0;
-		int count = 5; 
-
-		try {
-			start = Integer.parseInt(req.getParameter("start"));
-		} catch (NumberFormatException e) {
-		}
-		
-		List<Rule> rules = rld.list(start, count);
+		String key=req.getParameter("key");
+		List<Rule> rules = rld.search(key);
 		System.out.println(rules.get(0).getdeposit());
 		req.setAttribute("rules", rules); 
 		req.getRequestDispatcher("Rule_List.jsp").forward(req, resp);

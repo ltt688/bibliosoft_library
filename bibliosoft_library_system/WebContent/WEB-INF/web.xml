@@ -120,6 +120,14 @@
   <url-pattern>/resetadminpassword</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  <servlet-name>retrievepasswordServlet</servlet-name>
+  <servlet-class>servlet.retrievepasswordServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>retrievepasswordServlet</servlet-name>
+  <url-pattern>/retrievepassword</url-pattern>
+  </servlet-mapping>
 
 
 

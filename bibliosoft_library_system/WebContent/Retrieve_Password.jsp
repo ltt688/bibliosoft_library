@@ -1,12 +1,12 @@
 
 <%@ page language="java" import="java.util.*"
 	contentType="text/html;charset=GBK" pageEncoding="GBK"%>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ page import ="entity.Rule" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page import ="entity.Librarian" %>
 <!DOCTYPE html>
 <html>
 <head>
-<title>Rule Edit</title>
+<title>Librarian Edit</title>
 <meta
 	content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
 	name='viewport' />
@@ -92,28 +92,27 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body class='contrast-blue '>
+	
 	<div id='wrapper'>
-			    
-	<div class='container-fluid'>
+		
+	
+			<div class='container-fluid'>
 				<div class='row-fluid' id='content-wrapper'>
 					<div class='span12'>
 						<div class='row-fluid'>
 							<div class='span12'>
 								<div class='page-header'>
 									<h1 class='pull-left'>
-										<i class='icon-ok'></i> <span>Rule Edition</span>
+										<i class='icon-ok'></i> <span>Retrieve Password</span>
 									</h1>
 									<div class='pull-right'>
 										<ul class='breadcrumb'>
 											<li><a href="calendar.jsp"><i class='icon-bar-chart'></i>
 											</a></li>
 											<li class='separator'><i class='icon-angle-right'></i></li>
-											<li>Rule Manager</li>
+											<li>Librarian Manager</li>
 											<li class='separator'><i class='icon-angle-right'></i></li>
-											<li>Rule Edit</li>
-
-											<li class='separator'><i class='icon-angle-right'></i></li>
-											<li class='active'>Rule modification</li>
+											<li>Retrieve Password</li>
 
 										</ul>
 									</div>
@@ -123,7 +122,7 @@
 						<div class='row-fluid'>
 							<div class='span12 box'>
 								<div class='box-header blue-background'>
-									<div class='title'>Basic Information</div>
+									<div class='title'>Retrieve Password</div>
 									<div class='actions'>
 										<a href="#" class="btn box-remove btn-mini btn-link"><i
 											class='icon-remove'></i> </a> <a href="#"
@@ -131,61 +130,27 @@
 									</div>
 								</div>
 								<div class='box-content'>
-									<form method="get" action="editRuleWeb"
-										class='form form-horizontal validate-form'
+									<form method="post" action="retrievepassword" class='form form-horizontal validate-form'
 										style='margin-bottom: 0;' />
 
 
-									<%
-				        Rule rule=(Rule)request.getAttribute("rule");
-				        %>
+								
 									<div class='control-group'>
-										<label class='control-label' for='validation_name'>RuleID</label>
+										<label class='control-label' for='validation_name'>LibraryID</label>
 										<div class='controls'>
 											<input data-rule-minlength='2' data-rule-required='true'
-												id='rule_id' name='rule_id'
-												value=<% out.println(rule.getrule_id()); %>
-												placeholder='rule id' type='text'  readonly="readonly" />
+												id='account' name='accounnt' placeholder='Please input id' 
+												type='text'  />
 										</div>
 
 									</div>
-									<div class='control-group'>
-										<label class='control-label' for='validation_name'>fine</label>
-										<div class='controls'>
-											<input data-rule-minlength='1' data-rule-required='true'
-												id='fine' name='fine' value=<% out.println(rule.getfine()); %>
-												 placeholder='fine'
-												type='text' />
-										</div>
-									</div>
-
-
-									<div class='control-group'>
-										<label class='control-label' for='validation_name'>return_peroid</label>
-										<div class='controls'>
-											<input data-rule-minlength='1' data-rule-required='true'
-												id='return_period' name='return_period' value=<% out.println(rule.getreturn_period()); %>
-												placeholder='return period' type='text' />
-										</div>
-									</div>
-									<div class='control-group'>
-										<label class='control-label' for='validation_password'>deposit</label>
-										<div class='controls'>
-											<input data-rule-minlength='1' data-rule-password='true'
-												data-rule-required='true' id='deposit'
-												name='deposit' value=<% out.println(rule.getdeposit()); %>
-												 placeholder='deposit'
-												type='text' />
-										</div>
-									</div>
-									
 									
 									<div class='form-actions' style='margin-bottom: 0'>
 										<button class='btn btn-primary' type='submit'>
-											<i class='icon-save'></i> Submit
+											<i class='icon-save'></i> Search
 										</button>
 									</div>
-									</form>
+									</form>	
 								</div>
 							</div>
 						</div>
@@ -194,6 +159,7 @@
 					</div>
 				</div>
 			</div>
+		
 	</div>
 	<!-- / jquery -->
 	<script src='assets/javascripts/jquery/jquery.min.js'
