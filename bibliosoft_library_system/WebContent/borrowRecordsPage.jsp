@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="java.util.*"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://jsptags.com/tags/navigation/pager" prefix="pg" %>
 <!DOCTYPE html>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -18,15 +19,10 @@
 <body>
 
 	
-	
 	<div class="baidu" id="fix">
 	
 <form  action="borrowRecordsPageWeb" method="post" name="f" onsubmit="return chkForm(this)" id="f">    
-      <div class="search_bgimg"><!--select class="option" name="choice" style="width:500px;height:35.78px;"BACKGROUND-COLOR: #FFFFF0;color: #003366;>
-                                <option value="title">Title</option>
-                                <option value="author">Author</option>
-                                <option value="isbn">ISBN</option>
-                              </select-->
+      <div class="search_bgimg">
               <input type="hidden" id="historyCount" name="historyCount" value="1" />
           <span class="sone">
           Please input the phone of reader
@@ -44,7 +40,7 @@
     	</div></form>
 </div>
 
-
+	<pg:pager url="borrowRecordsPageWeb" maxPageItems = "5" maxIndexPages="10" export="offset,currentPageNumber=pageNumber" isOffset="false"  index="half-full"  >
 
 	<div class="panel admin-panel">
 
@@ -59,6 +55,7 @@
 				<th width="12%">Borrow state</th>
 			</tr>
 			<c:forEach items="${borrowRecordses}" var="borrowRecords" varStatus="bo">
+				<pg:item>
 				<tr>
 					<td style="text-align: left;">
 					${borrowRecords.getBorrow_id()}</td>
@@ -71,16 +68,42 @@
 					<td>
 					</td>
 				</tr>
+					</pg:item>
 			</c:forEach>
 		</table>
+<div style="text-align:center">
+  <pg:index>
+  <pg:first>  
+    <div class="button"><a href="${pageUrl}">Home</a></div>  
+  </pg:first>  
+  <pg:prev>  
+    <div class="button"><a href="${pageUrl }">Pre</a></div>  
+  </pg:prev>  
+  <pg:pages>  
+    <c:choose>
+         <%--当循环页码是当前页码，则该页码不可以导航，并显示为红色--%>
+      <c:when test="${currentPageNumber eq pageNumber}">  
+        <font color="red">[${pageNumber }]</font>  
+      </c:when>
+     
+      <%-- 当循环页码不是当前页码，则该页码可以导航 --%>
+      <c:otherwise>  
+        <a href="${pageUrl }">[${pageNumber }]</a>  
+      </c:otherwise>  
+    </c:choose>  
+  </pg:pages>  
+  <pg:next>  
+    <div class="button"><a href="${pageUrl }">Next</a></div>  
+  </pg:next>  
+  <pg:last>  
+    <div class="button"><a href="${pageUrl }">Last</a></div>  
+  </pg:last>
+  </pg:index>
+</div>
 	</div>
+		</pg:pager>
    <div class="button">
-    <a href="borrowPage.jsp">Add</a>
+    <a href="borrowPageWeb">Add</a>
    </div>
 </body>
-<script type="text/javascript">
-  $(function(){  
-           location.reload();
-}
-</script>
 </html>

@@ -45,7 +45,8 @@
     <li><a href='BorrowServlet?name=${currentUser.reader_phone}' target="right"><span class="icon-caret-right"></span>Borrowed History</a></li>
     <li><a href='RetuenServlet?name=${currentUser.reader_phone}' target="right"><span class="icon-caret-right"></span>Returned History</a></li>
     <li><a href="Setpwd1.jsp" target="right"><span class="icon-caret-right"></span>Set PassWord</a></li>
-           
+    <li><a href="ReserveUser.jsp" target="right"><span class="icon-caret-right"></span>Ordered Books</a></li>
+    <li><a href="PublishUser.jsp" target="right"><span class="icon-caret-right"></span>Lookup Fine</a></li>
   </ul>  
 </div>
 </div>

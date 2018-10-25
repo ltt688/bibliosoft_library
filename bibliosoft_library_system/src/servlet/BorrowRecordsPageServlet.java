@@ -21,14 +21,7 @@ public class BorrowRecordsPageServlet extends HttpServlet{
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html; charset=UTF-8");
-		int start = 0;
-		int count = 5;
-
-		try {
-			start = Integer.parseInt(req.getParameter("start"));
-		} catch (NumberFormatException e) {
-		}
-		List<BorrowRecords> borrowRecordses = borrowRecordsDAO.list(start, count);
+		List<BorrowRecords> borrowRecordses = borrowRecordsDAO.list();
 		req.setAttribute("borrowRecordses", borrowRecordses);
 		req.getRequestDispatcher("borrowRecordsPage.jsp").forward(req, resp);
 	}
@@ -41,9 +34,7 @@ public class BorrowRecordsPageServlet extends HttpServlet{
 		{
 			showAll=1;
 		}
-		int start = 0;
-		int count = 5;
-		List<BorrowRecords> borrowRecordses = borrowRecordsDAO.list(start, count);
+		List<BorrowRecords> borrowRecordses = borrowRecordsDAO.list();
 		List<BorrowRecords> showRecordses=new ArrayList<BorrowRecords>();
 	    Iterator i=borrowRecordses.iterator();
 	    while (i.hasNext())

@@ -259,7 +259,7 @@
 
 
 
-<servlet>
+    <servlet>
 		<servlet-name>BookListPageServlet</servlet-name>
 		<servlet-class>servlet.BookListPageServlet</servlet-class>
 	</servlet>
@@ -291,6 +291,7 @@
 		<servlet-name>ReaderListPageServlet</servlet-name>
 		<url-pattern>/readerListPageWeb</url-pattern>
 	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>AddReaderPageServlet</servlet-name>
 		<servlet-class>servlet.AddReaderPageServlet</servlet-class>
@@ -299,6 +300,7 @@
 		<servlet-name>AddReaderPageServlet</servlet-name>
 		<url-pattern>/addReaderPageWeb</url-pattern>
 	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>EditReaderPageServlet</servlet-name>
 		<servlet-class>servlet.EditReaderPageServlet</servlet-class>
@@ -347,10 +349,45 @@
 		<servlet-name>PunishServlet</servlet-name>
 		<url-pattern>/punishWeb</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AddReaderRequrementsServlet</servlet-name>
+		<servlet-class>servlet.AddReaderRequrementsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddReaderRequrementsServlet</servlet-name>
+		<url-pattern>/addReaderRequrementsWeb</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>AddPunishServlet</servlet-name>
+		<servlet-class>servlet.AddPunishServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddPunishServlet</servlet-name>
+		<url-pattern>/addPunishWeb</url-pattern>
+	</servlet-mapping>
 
 
-
-
+<servlet>
+    <description></description>
+    <display-name>ReserveServlet</display-name>
+    <servlet-name>ReserveServlet</servlet-name>
+    <servlet-class>servlet.ReserveServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReserveServlet</servlet-name>
+    <url-pattern>/R1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PublishServlet</display-name>
+    <servlet-name>PublishServlet</servlet-name>
+    <servlet-class>servlet.PublishServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PublishServlet</servlet-name>
+    <url-pattern>/P1</url-pattern>
+  </servlet-mapping>
  
   
 

@@ -39,6 +39,6 @@
 			</c:forEach>
 		</table>
 	</div>
-     <!--a href="addReaderPageWeb"><button class="button">Create</button></a-->
+     <a href="addReaderRequrementsWeb"><button class="button">Create</button></a>
 </body>
 </html>

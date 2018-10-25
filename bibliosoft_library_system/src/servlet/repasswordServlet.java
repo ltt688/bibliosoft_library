@@ -27,7 +27,7 @@ public class repasswordServlet extends HttpServlet{
 		}
 		else{
 			req.setAttribute("librarian", librarian);
-			System.out.println()librarian.getManager_password();
+			
 			req.getRequestDispatcher("Retrieve_Password1.jsp").forward(req, resp);
 		}
 	}
