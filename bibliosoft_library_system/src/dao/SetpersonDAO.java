@@ -19,7 +19,7 @@ public class SetpersonDAO {
 
 			Statement s = c.createStatement();
 
-			String sql = "select count(*) from student";
+			String sql = "select count(*) from reader";
 
 			ResultSet rs = s.executeQuery(sql);
 			while (rs.next()) {
@@ -70,7 +70,7 @@ public class SetpersonDAO {
 
 			Connection c = DBHelper.getInstance().getConnection();
 
-			String sql = "select * from reader order by reader_phone desc limit ?,? ";
+			String sql = "select * from readerlisttable order by reader_phone desc limit ?,? ";
 
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, start);

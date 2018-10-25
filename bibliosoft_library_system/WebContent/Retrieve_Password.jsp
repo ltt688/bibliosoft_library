@@ -130,7 +130,9 @@
 									</div>
 								</div>
 								<div class='box-content'>
-									<form method="post" action="retrievepassword" class='form form-horizontal validate-form'
+								
+								
+									<form method="get" action="retrievepassword" class='form form-horizontal validate-form'
 										style='margin-bottom: 0;' />
 
 
@@ -142,15 +144,14 @@
 												id='account' name='accounnt' placeholder='Please input id' 
 												type='text'  />
 										</div>
-
 									</div>
-									
 									<div class='form-actions' style='margin-bottom: 0'>
 										<button class='btn btn-primary' type='submit'>
 											<i class='icon-save'></i> Search
 										</button>
 									</div>
-									</form>	
+									
+								</form>
 								</div>
 							</div>
 						</div>

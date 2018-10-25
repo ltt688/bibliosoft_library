@@ -17,7 +17,7 @@ public class SetpwdDAO {
 
 			Statement s = c.createStatement();
 
-			String sql = "select count(*) from student";
+			String sql = "select count(*) from reader";
 
 			ResultSet rs = s.executeQuery(sql);
 			while (rs.next()) {

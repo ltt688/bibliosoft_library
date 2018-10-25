@@ -121,152 +121,28 @@
   </servlet-mapping>
   
   <servlet>
-  <servlet-name>retrievepasswordServlet</servlet-name>
-  <servlet-class>servlet.retrievepasswordServlet</servlet-class>
+  <servlet-name>repasswordServlet</servlet-name>
+  <servlet-class>servlet.repasswordServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  <servlet-name>retrievepasswordServlet</servlet-name>
+  <servlet-name>repasswordServlet</servlet-name>
   <url-pattern>/retrievepassword</url-pattern>
   </servlet-mapping>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<servlet>
+    <servlet-name>StudentListServlet</servlet-name>
+    <servlet-class>servlet.StudentListServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentListServlet</servlet-name>
+    <url-pattern>/stuList</url-pattern>
+  </servlet-mapping>
 
 
 
 <servlet>
-		<servlet-name>BookListPageServlet</servlet-name>
-		<servlet-class>servlet.BookListPageServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>BookListPageServlet</servlet-name>
-		<url-pattern>/bookListPageWeb</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>AddBookPageServlet</servlet-name>
-		<servlet-class>servlet.AddBookPageServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>AddBookPageServlet</servlet-name>
-		<url-pattern>/addBookPageWeb</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>EditBookPageServlet</servlet-name>
-		<servlet-class>servlet.EditBookPageServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>EditBookPageServlet</servlet-name>
-		<url-pattern>/editBookPageWeb</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>ReaderListPageServlet</servlet-name>
-		<servlet-class>servlet.ReaderListPageServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ReaderListPageServlet</servlet-name>
-		<url-pattern>/readerListPageWeb</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>AddReaderPageServlet</servlet-name>
-		<servlet-class>servlet.AddReaderPageServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>AddReaderPageServlet</servlet-name>
-		<url-pattern>/addReaderPageWeb</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>EditReaderPageServlet</servlet-name>
-		<servlet-class>servlet.EditReaderPageServlet</servlet-class>
-	</servlet>
-  <servlet>
-    <description></description>
-    <display-name>UserLoginServlet</display-name>
-    <servlet-name>UserLoginServlet</servlet-name>
-    <servlet-class>servlet.UserLoginServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>UserLoginServlet</servlet-name>
-    <url-pattern>/login</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>PersonServlet</display-name>
-    <servlet-name>PersonServlet</servlet-name>
-    <servlet-class>servlet.PersonServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>PersonServlet</servlet-name>
-    <url-pattern>/PP</url-pattern>
-  </servlet-mapping>	<servlet-mapping>
-		<servlet-name>EditReaderPageServlet</servlet-name>
-		<url-pattern>/editReaderPageWeb</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>PerformancePageServlet</servlet-name>
-		<servlet-class>servlet.PerformancePageServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>PerformancePageServlet</servlet-name>
-		<url-pattern>/performancePageWeb</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>BorrowRecordsPageServlet</servlet-name>
-		<servlet-class>servlet.BorrowRecordsPageServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>BorrowRecordsPageServlet</servlet-name>
-		<url-pattern>/borrowRecordsPageWeb</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>BorrowPageServlet</servlet-name>
-		<servlet-class>servlet.BorrowPageServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>BorrowPageServlet</servlet-name>
-		<url-pattern>/borrowPageWeb</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>ReaderRequrementsServlet</servlet-name>
-		<servlet-class>servlet.ReaderRequrementsServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>ReaderRequrementsServlet</servlet-name>
-		<url-pattern>/readerRequrementsWeb</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>PunishServlet</servlet-name>
-		<servlet-class>servlet.PunishServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>PunishServlet</servlet-name>
-		<url-pattern>/punishWeb</url-pattern>
-	</servlet-mapping>
-
-
-
-
-  <servlet>
     <description></description>
     <display-name>SearchName</display-name>
     <servlet-name>SearchName</servlet-name>
@@ -286,8 +162,29 @@
     <servlet-name>SearchAuthor</servlet-name>
     <url-pattern>/SearchAuthor</url-pattern>
   </servlet-mapping>
-
-   <description></description>
+ 
+  <servlet>
+    <description></description>
+    <display-name>UserLoginServlet</display-name>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <servlet-class>servlet.UserLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserLoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PersonServlet</display-name>
+    <servlet-name>PersonServlet</servlet-name>
+    <servlet-class>servlet.PersonServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PersonServlet</servlet-name>
+    <url-pattern>/PP</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
     <display-name>AddressServlet</display-name>
     <servlet-name>AddressServlet</servlet-name>
     <servlet-class>servlet.AddressServlet</servlet-class>
@@ -362,14 +259,100 @@
 
 
 
+<servlet>
+		<servlet-name>BookListPageServlet</servlet-name>
+		<servlet-class>servlet.BookListPageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BookListPageServlet</servlet-name>
+		<url-pattern>/bookListPageWeb</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>AddBookPageServlet</servlet-name>
+		<servlet-class>servlet.AddBookPageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddBookPageServlet</servlet-name>
+		<url-pattern>/addBookPageWeb</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EditBookPageServlet</servlet-name>
+		<servlet-class>servlet.EditBookPageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>EditBookPageServlet</servlet-name>
+		<url-pattern>/editBookPageWeb</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ReaderListPageServlet</servlet-name>
+		<servlet-class>servlet.ReaderListPageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReaderListPageServlet</servlet-name>
+		<url-pattern>/readerListPageWeb</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>AddReaderPageServlet</servlet-name>
+		<servlet-class>servlet.AddReaderPageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddReaderPageServlet</servlet-name>
+		<url-pattern>/addReaderPageWeb</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>EditReaderPageServlet</servlet-name>
+		<servlet-class>servlet.EditReaderPageServlet</servlet-class>
+	</servlet>
+  	<servlet-mapping>
+		<servlet-name>EditReaderPageServlet</servlet-name>
+		<url-pattern>/editReaderPageWeb</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>PerformancePageServlet</servlet-name>
+		<servlet-class>servlet.PerformancePageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PerformancePageServlet</servlet-name>
+		<url-pattern>/performancePageWeb</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>BorrowRecordsPageServlet</servlet-name>
+		<servlet-class>servlet.BorrowRecordsPageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BorrowRecordsPageServlet</servlet-name>
+		<url-pattern>/borrowRecordsPageWeb</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>BorrowPageServlet</servlet-name>
+		<servlet-class>servlet.BorrowPageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BorrowPageServlet</servlet-name>
+		<url-pattern>/borrowPageWeb</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>ReaderRequrementsServlet</servlet-name>
+		<servlet-class>servlet.ReaderRequrementsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReaderRequrementsServlet</servlet-name>
+		<url-pattern>/readerRequrementsWeb</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>PunishServlet</servlet-name>
+		<servlet-class>servlet.PunishServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PunishServlet</servlet-name>
+		<url-pattern>/punishWeb</url-pattern>
+	</servlet-mapping>
 
 
 
 
-
-
-
-
+ 
+  
 
 
   

@@ -54,7 +54,7 @@ public class ReaderDAO {
 
 			Connection c = DBHelper.getInstance().getConnection();
 
-			String sql = "select * from readerListTable order by id desc limit ?,? ";
+			String sql = "select * from readerlisttable order by id desc limit ?,? ";
 
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, start);

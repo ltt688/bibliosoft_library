@@ -15,15 +15,21 @@ import utils.DBHelper;
 import dao.LibrarianDao;
 import entity.Librarian;
 
-public class retrievepasswordServlet extends HttpServlet{
+public class repasswordServlet extends HttpServlet{
 	
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String id=req.getParameter("account");
 		LibrarianDao librarianDao=new LibrarianDao();
 		Librarian librarian=librarianDao.librarianifo(id);
-		System.out.println(librarian.getManager_name());
-		req.setAttribute("librarian", librarian);
-		resp.sendRedirect("Retrieve_Password1.jsp");
+		if(librarian==null)
+		{
+			req.getRequestDispatcher("Retrieve_Password.jsp?error=yes").forward(req, resp);
+		}
+		else{
+			req.setAttribute("librarian", librarian);
+			System.out.println()librarian.getManager_password();
+			req.getRequestDispatcher("Retrieve_Password1.jsp").forward(req, resp);
+		}
 	}
 	
 
