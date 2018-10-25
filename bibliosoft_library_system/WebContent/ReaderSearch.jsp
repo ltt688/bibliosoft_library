@@ -180,7 +180,7 @@ body{text-align:center}
 							<th>Book_price</th>
 							<th>Book_state</th>
 							<th>Location</th>
-							<th></th>	
+							<th>Detailed Information </th>	
 							</tr>
         
 			<%
@@ -222,7 +222,7 @@ body{text-align:center}
 			<th><%=times.getBook_state() %></th>
 			
 			<th><%=times.getLocation() %></th>
-			<td><a href="editStudent?id=${student.id}">Lookup</a></td>
+			<td><a href='OrderServlet?id=<%=times.getId()%>'>Lookup</a></td>
 			</tr>
 
 			<%

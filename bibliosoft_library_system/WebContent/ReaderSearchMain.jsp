@@ -78,7 +78,7 @@
 		</div>
 		<div class="thr">
 			<p id="lh">
-				<a href="http://ir.baidu.com">About  Bibliosoft</a>
+				<a href="ReaderSearch.jsp">About Bibliosoft</a>
 				</p>
 		</div>
 		

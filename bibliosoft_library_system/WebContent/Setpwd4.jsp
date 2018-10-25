@@ -8,6 +8,7 @@
 <title>forgot</title>
 <link rel="shortcut icon" href="images/favicon.ico" />
 <link type="text/css" href="css/css.css" rel="stylesheet" />
+ <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 </head>
 
 </head>
@@ -19,15 +20,16 @@
       <div class="liulist for-cur"></div>
       <div class="liulist for-cur"></div>
       <div class="liutextbox">
-       <div class="liutext for-cur"><em>1</em><br /><strong>Fill in the account</strong></div>
-       <div class="liutext for-cur"><em>2</em><br /><strong>Verification of Identity</strong></div>
-       <div class="liutext for-cur"><em>3</em><br /><strong>set new password</strong></div>
-       <div class="liutext for-cur"><em>4</em><br /><strong>finish</strong></div>
+       <div class="liutext for-cur"><em>o</em><br /><strong></strong></div>
+       <div class="liutext for-cur"><em>1</em><br /><strong>Fill in new password</strong></div>
+       <div class="liutext for-cur"><em>o</em><br /><strong></strong></div>
+       <div class="liutext for-cur"><em>2</em><br /><strong>Finish</strong></div>
       </div>
      </div><!--for-liucheng/-->
 	  <br><br><br><br><br>
       <div class="successs">
-       <h3>congratulations！</h3>
+       <h3>Amend the success !</h3>
+       <a href="Setpwd1.jsp"><button type="button" class="btn btn-primary">Return</button></a>
       </div>
    </div><!--web-width/-->
 <!--content/-->

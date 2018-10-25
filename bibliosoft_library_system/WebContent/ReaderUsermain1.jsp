@@ -22,8 +22,8 @@
 
 <div class="head-l">
 <div class="col-lg-5  pull-right">
-  <a class="button button-little bg-green" href="ReaderSearchMain.jsp" target="_blank">Search</a> &nbsp;&nbsp;
   <a class="button button-little bg-blue" href="ReaderLogin.jsp" target="_blank" >login</a>&nbsp;&nbsp;
+  <a class="button button-little bg-green" href="ReaderSearchMain.jsp" target="_blank">Search</a> &nbsp;&nbsp;
   <a class="button button-little bg-red" href=ReaderUsermain1.jsp>Logout</a>
   </div>
 </div>
@@ -32,8 +32,9 @@
   <div class="leftnav-title"><strong><span class="icon-list"></span>User function</strong></div>
   <h2><span class="icon-pencil-square-o">Book settings</span></h2>
   <ul style="display:block">
+    <li><a href="Post.jsp" target="right"><span class="icon-caret-right"></span>System Posts</a></li>   
     <li><a href="ReaderSearch.jsp" target="right"><span class="icon-caret-right"></span>Search Books</a></li>   
-    <li><a href="stuList" target="right"><span class="icon-caret-right"></span>Check out Books</a></li>    
+    <li><a href="stuList" target="right"><span class="icon-caret-right"></span>Check out Books</a></li>   
   </ul>   
 </div>
 </div>

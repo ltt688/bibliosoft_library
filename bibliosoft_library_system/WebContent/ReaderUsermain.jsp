@@ -23,9 +23,10 @@
 
 <div class="head-l">
 <div class="col-lg-5  pull-right">
-  <a class="button button-little bg-green" href="ReaderSearchMain.jsp" target="_blank">Search</a> &nbsp;&nbsp;
   <a class="button button-little bg-blue" href="ReaderLogin.jsp" target="_blank" >login</a>&nbsp;&nbsp;
+  <a class="button button-little bg-green" href="ReaderSearchMain.jsp" target="_blank">Search</a> &nbsp;&nbsp;
   <a class="button button-little bg-red" href=ReaderUsermain1.jsp>Logout</a>
+   
   </div>
 </div>
 
@@ -33,15 +34,16 @@
   <div class="leftnav-title"><strong><span class="icon-list"></span>User function</strong></div>
   <h2><span class="icon-pencil-square-o">Book settings</span></h2>
   <ul style="display:block">
+    <li><a href="Post.jsp" target="right"><span class="icon-caret-right"></span>System Posts</a></li>   
     <li><a href="ReaderSearch.jsp" target="right"><span class="icon-caret-right"></span>Search Books</a></li>   
     <li><a href="stuList" target="right"><span class="icon-caret-right"></span>Check out Books</a></li>    
   </ul>   
   <h2><span class="icon-user"></span>Personal Settings</h2>
   <ul>
 
-    <li>  <a href='PP?name=${currentUser.reader_phone}'><span class="icon-caret-right"></span>Personal Information</a></li>
-    <li><a href="Borrowedhistory.jsp" target="right"><span class="icon-caret-right"></span>Borrowed History</a></li>
-    <li><a href="Returnedhistory.jsp" target="right"><span class="icon-caret-right"></span>Returned History</a></li>
+    <li>  <a href='PP?name=${currentUser.reader_phone}'target="right"><span class="icon-caret-right"></span>Personal Information</a></li>
+    <li><a href='BorrowServlet?name=${currentUser.reader_phone}' target="right"><span class="icon-caret-right"></span>Borrowed History</a></li>
+    <li><a href='RetuenServlet?name=${currentUser.reader_phone}' target="right"><span class="icon-caret-right"></span>Returned History</a></li>
     <li><a href="Setpwd1.jsp" target="right"><span class="icon-caret-right"></span>Set PassWord</a></li>
            
   </ul>  
