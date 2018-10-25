@@ -1,13 +1,13 @@
 
 package bean;
 
-public class AddMessageBean {  
+public class Student {  
 
     
 
     /** 
 
-     * ÊôĞÔºÍÊı¾İ¿âÖĞµÄ×Ö¶ÎÏà¶ÔÓ¦ 
+     * ï¿½ï¿½ï¿½Ôºï¿½ï¿½ï¿½ï¿½İ¿ï¿½ï¿½Ğµï¿½ï¿½Ö¶ï¿½ï¿½ï¿½ï¿½Ó¦ 
 
      */  
 
