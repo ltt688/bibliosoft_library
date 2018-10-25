@@ -43,22 +43,17 @@ public class ReaderDAO {
 		return total;
 	}
   
-  public List<Reader> list() {
-		return list(0, Short.MAX_VALUE);
-	}
 
-	public List<Reader> list(int start, int count) {
+	public List<Reader> list() {
 		List<Reader> readers = new ArrayList<Reader>();
 
 		try {
 
 			Connection c = DBHelper.getInstance().getConnection();
 
-			String sql = "select * from readerListTable order by id desc limit ?,? ";
+			String sql = "select * from readerListTable order by id desc ";
 
 			PreparedStatement ps = c.prepareStatement(sql);
-			ps.setInt(1, start);
-			ps.setInt(2, count);
 
 			ResultSet rs = ps.executeQuery();
 

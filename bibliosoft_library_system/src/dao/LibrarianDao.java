@@ -71,7 +71,6 @@ public class LibrarianDao {
 				librarian.setManager_password(rs.getString("Manager_password"));
 
 				librarians.add(librarian);
-				System.out.println(librarian.getManager_ID());
 			}
 			DBHelper.closeConnection(c, ps, rs);
 		} catch (Exception e) {

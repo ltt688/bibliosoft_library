@@ -41,22 +41,18 @@ public class BorrowRecordsDAO {
 		return total;
 	}
   
-  public List<BorrowRecords> list() {
-		return list(0, Short.MAX_VALUE);
-	}
 
-	public List<BorrowRecords> list(int start, int count) {
+	public List<BorrowRecords> list() {
 		List<BorrowRecords> borrowRecordses = new ArrayList<BorrowRecords>();
 
 		try {
 
 			Connection c = DBHelper.getInstance().getConnection();
 
-			String sql = "select * from borrow order by borrow_id desc limit ?,? ";
+			String sql = "select * from borrow order by borrow_id  ";
 
 			PreparedStatement ps = c.prepareStatement(sql);
-			ps.setInt(1, start);
-			ps.setInt(2, count);
+
 
 			ResultSet rs = ps.executeQuery();
 

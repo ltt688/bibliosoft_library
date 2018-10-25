@@ -41,22 +41,17 @@ public class BookDAO {
 		return total;
 	}
   
-  public List<Book> list() {
-		return list(0, Short.MAX_VALUE);
-	}
 
-	public List<Book> list(int start, int count) {
+	public List<Book> list() {
 		List<Book> books = new ArrayList<Book>();
 
 		try {
 
 			Connection c = DBHelper.getInstance().getConnection();
 
-			String sql = "select * from bookListTable order by id desc limit ?,? ";
+			String sql = "select * from bookListTable order by id ";
 
 			PreparedStatement ps = c.prepareStatement(sql);
-			ps.setInt(1, start);
-			ps.setInt(2, count);
 
 			ResultSet rs = ps.executeQuery();
 
