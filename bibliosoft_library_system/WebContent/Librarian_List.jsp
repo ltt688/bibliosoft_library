@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.util.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page import ="entity.Librarian" %>
+<%@taglib uri="http://jsptags.com/tags/navigation/pager" prefix="pg" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -92,6 +93,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 <body class='contrast-blue '>
+	<pg:pager url="LibrarianList" maxPageItems = "5" maxIndexPages="10" export="offset,currentPageNumber=pageNumber" isOffset="false"  index="half-full"  > 
 	
 	<div id='wrapper'>
 		
@@ -164,6 +166,7 @@
 												<tbody>
 												<%List<Librarian> librarians=(List<Librarian>)request.getAttribute("librarians") ;%>
 													<c:forEach items="${librarians}" var="librarian" varStatus="li">
+													 <pg:item>
 														<tr>
 															<td>${librarian.getManager_ID()}</td>
 															<td>${librarian.getManager_name()}</td>
@@ -181,9 +184,37 @@
 																</form>
 															</td>
 														</tr>
+														 </pg:item>  
 													</c:forEach>
 												</tbody>
 											</table>
+											  <pg:index>
+  <pg:first>  
+    <a href="${pageUrl}">Home</a>  
+  </pg:first>  
+  <pg:prev>  
+    <a href="${pageUrl }">Pre</a>  
+  </pg:prev>  
+  <pg:pages>  
+    <c:choose>
+         <%--当循环页码是当前页码，则该页码不可以导航，并显示为红色--%>
+      <c:when test="${currentPageNumber eq pageNumber}">  
+        <font color="red">[${pageNumber }]</font>  
+      </c:when>
+     
+      <%-- 当循环页码不是当前页码，则该页码可以导航 --%>
+      <c:otherwise>  
+        <a href="${pageUrl }">[${pageNumber }]</a>  
+      </c:otherwise>  
+    </c:choose>  
+  </pg:pages>  
+  <pg:next>  
+    <a href="${pageUrl }">Next</a>  
+  </pg:next>  
+  <pg:last>  
+    <a href="${pageUrl }">Last</a>  
+  </pg:last>
+  </pg:index>
 											<div>
 </div>
 										</div>
@@ -385,6 +416,6 @@
 		type='text/javascript'></script>
 	<script src='assets/javascripts/demo/charts.js' type='text/javascript'></script>
 	<script src='assets/javascripts/demo/demo.js' type='text/javascript'></script>
-
+</pg:pager>
 </body>
 </html>
