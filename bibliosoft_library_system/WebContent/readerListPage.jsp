@@ -114,6 +114,6 @@
 	</div>
 	</pg:pager>
 	</form>
-     <a href="addReaderPageWeb"><button class="button">Create</button></a>
+     <div class="button"><a href="addReaderPageWeb">Create</a></div>
 </body>
 </html>

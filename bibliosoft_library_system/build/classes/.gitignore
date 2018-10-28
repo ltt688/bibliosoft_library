@@ -1,4 +1,6 @@
-/dao/
-/servlet/
+/api/
 /bean/
+/dao/
 /entity/
+/servlet/
+/utils/

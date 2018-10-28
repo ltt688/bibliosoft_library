@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="bibliosoft_library">
-        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/bibliosoft_library_system/src"/>
-        <property name="context-root" value="bibliosoft_library"/>
-        <property name="java-output-path" value="/bibliosoft_library/bibliosoft_library_system/build/classes"/>
-    </wb-module>
-</project-modules>
